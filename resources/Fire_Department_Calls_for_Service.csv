@@ -1,0 +1,1038 @@
+﻿Call Type Group,Neighborhooods - Analysis Boundaries,Call Type,Incident Number
+Alarm,Bayview Hunters Point,Alarms,"1,562"
+Alarm,Bernal Heights,Alarms,426
+Alarm,Castro/Upper Market,Alarms,840
+Alarm,Chinatown,Alarms,"1,023"
+Alarm,Excelsior,Alarms,336
+Alarm,Financial District/South Beach,Alarms,"4,148"
+Alarm,Glen Park,Alarms,203
+Alarm,Golden Gate Park,Alarms,64
+Alarm,Haight Ashbury,Alarms,688
+Alarm,Hayes Valley,Alarms,"1,128"
+Alarm,Inner Richmond,Alarms,641
+Alarm,Inner Sunset,Alarms,898
+Alarm,Japantown,Alarms,321
+Alarm,Lakeshore,Alarms,937
+Alarm,Lincoln Park,Alarms,67
+Alarm,Lone Mountain/USF,Alarms,465
+Alarm,Marina,Alarms,"1,289"
+Alarm,McLaren Park,Alarms,124
+Alarm,Mission,Alarms,"2,467"
+Alarm,Mission Bay,Alarms,981
+Alarm,Nob Hill,Alarms,"1,325"
+Alarm,Noe Valley,Alarms,615
+Alarm,None,Alarms,6
+Alarm,North Beach,Alarms,"1,025"
+Alarm,Oceanview/Merced/Ingleside,Alarms,332
+Alarm,Outer Mission,Alarms,237
+Alarm,Outer Richmond,Alarms,714
+Alarm,Pacific Heights,Alarms,"1,507"
+Alarm,Portola,Alarms,121
+Alarm,Potrero Hill,Alarms,"1,003"
+Alarm,Presidio,Alarms,310
+Alarm,Presidio Heights,Alarms,494
+Alarm,Russian Hill,Alarms,783
+Alarm,Seacliff,Alarms,110
+Alarm,South of Market,Alarms,"3,196"
+Alarm,Sunset/Parkside,Alarms,794
+Alarm,Tenderloin,Alarms,"4,253"
+Alarm,Treasure Island,Alarms,104
+Alarm,Twin Peaks,Alarms,362
+Alarm,Visitacion Valley,Alarms,210
+Alarm,West of Twin Peaks,Alarms,841
+Alarm,Western Addition,Alarms,"1,423"
+Alarm,Bayview Hunters Point,Assist Police,6
+Alarm,Bernal Heights,Assist Police,3
+Alarm,Castro/Upper Market,Assist Police,2
+Alarm,Chinatown,Assist Police,1
+Alarm,Excelsior,Assist Police,3
+Alarm,Financial District/South Beach,Assist Police,4
+Alarm,Golden Gate Park,Assist Police,3
+Alarm,Mission,Assist Police,2
+Alarm,Potrero Hill,Assist Police,3
+Alarm,South of Market,Assist Police,5
+Alarm,Sunset/Parkside,Assist Police,4
+Alarm,Tenderloin,Assist Police,1
+Alarm,West of Twin Peaks,Assist Police,2
+Alarm,Western Addition,Assist Police,1
+Alarm,Bayview Hunters Point,Citizen Assist / Service Call,252
+Alarm,Bernal Heights,Citizen Assist / Service Call,83
+Alarm,Castro/Upper Market,Citizen Assist / Service Call,112
+Alarm,Chinatown,Citizen Assist / Service Call,79
+Alarm,Excelsior,Citizen Assist / Service Call,69
+Alarm,Financial District/South Beach,Citizen Assist / Service Call,121
+Alarm,Glen Park,Citizen Assist / Service Call,48
+Alarm,Golden Gate Park,Citizen Assist / Service Call,23
+Alarm,Haight Ashbury,Citizen Assist / Service Call,60
+Alarm,Hayes Valley,Citizen Assist / Service Call,81
+Alarm,Inner Richmond,Citizen Assist / Service Call,74
+Alarm,Inner Sunset,Citizen Assist / Service Call,119
+Alarm,Japantown,Citizen Assist / Service Call,50
+Alarm,Lakeshore,Citizen Assist / Service Call,246
+Alarm,Lincoln Park,Citizen Assist / Service Call,4
+Alarm,Lone Mountain/USF,Citizen Assist / Service Call,68
+Alarm,Marina,Citizen Assist / Service Call,135
+Alarm,McLaren Park,Citizen Assist / Service Call,3
+Alarm,Mission,Citizen Assist / Service Call,267
+Alarm,Mission Bay,Citizen Assist / Service Call,69
+Alarm,Nob Hill,Citizen Assist / Service Call,146
+Alarm,Noe Valley,Citizen Assist / Service Call,128
+Alarm,None,Citizen Assist / Service Call,4
+Alarm,North Beach,Citizen Assist / Service Call,62
+Alarm,Oceanview/Merced/Ingleside,Citizen Assist / Service Call,79
+Alarm,Outer Mission,Citizen Assist / Service Call,50
+Alarm,Outer Richmond,Citizen Assist / Service Call,141
+Alarm,Pacific Heights,Citizen Assist / Service Call,115
+Alarm,Portola,Citizen Assist / Service Call,56
+Alarm,Potrero Hill,Citizen Assist / Service Call,79
+Alarm,Presidio,Citizen Assist / Service Call,9
+Alarm,Presidio Heights,Citizen Assist / Service Call,65
+Alarm,Russian Hill,Citizen Assist / Service Call,83
+Alarm,Seacliff,Citizen Assist / Service Call,18
+Alarm,South of Market,Citizen Assist / Service Call,221
+Alarm,Sunset/Parkside,Citizen Assist / Service Call,237
+Alarm,Tenderloin,Citizen Assist / Service Call,538
+Alarm,Treasure Island,Citizen Assist / Service Call,17
+Alarm,Twin Peaks,Citizen Assist / Service Call,26
+Alarm,Visitacion Valley,Citizen Assist / Service Call,53
+Alarm,West of Twin Peaks,Citizen Assist / Service Call,168
+Alarm,Western Addition,Citizen Assist / Service Call,148
+Alarm,Bayview Hunters Point,Electrical Hazard,80
+Alarm,Bernal Heights,Electrical Hazard,48
+Alarm,Castro/Upper Market,Electrical Hazard,38
+Alarm,Chinatown,Electrical Hazard,12
+Alarm,Excelsior,Electrical Hazard,89
+Alarm,Financial District/South Beach,Electrical Hazard,18
+Alarm,Glen Park,Electrical Hazard,19
+Alarm,Golden Gate Park,Electrical Hazard,9
+Alarm,Haight Ashbury,Electrical Hazard,16
+Alarm,Hayes Valley,Electrical Hazard,34
+Alarm,Inner Richmond,Electrical Hazard,63
+Alarm,Inner Sunset,Electrical Hazard,39
+Alarm,Japantown,Electrical Hazard,1
+Alarm,Lakeshore,Electrical Hazard,1
+Alarm,Lincoln Park,Electrical Hazard,1
+Alarm,Lone Mountain/USF,Electrical Hazard,25
+Alarm,Marina,Electrical Hazard,22
+Alarm,McLaren Park,Electrical Hazard,1
+Alarm,Mission,Electrical Hazard,101
+Alarm,Mission Bay,Electrical Hazard,9
+Alarm,Nob Hill,Electrical Hazard,8
+Alarm,Noe Valley,Electrical Hazard,78
+Alarm,None,Electrical Hazard,1
+Alarm,North Beach,Electrical Hazard,10
+Alarm,Oceanview/Merced/Ingleside,Electrical Hazard,61
+Alarm,Outer Mission,Electrical Hazard,37
+Alarm,Outer Richmond,Electrical Hazard,180
+Alarm,Pacific Heights,Electrical Hazard,28
+Alarm,Portola,Electrical Hazard,21
+Alarm,Potrero Hill,Electrical Hazard,50
+Alarm,Presidio,Electrical Hazard,5
+Alarm,Presidio Heights,Electrical Hazard,15
+Alarm,Russian Hill,Electrical Hazard,24
+Alarm,Seacliff,Electrical Hazard,4
+Alarm,South of Market,Electrical Hazard,26
+Alarm,Sunset/Parkside,Electrical Hazard,306
+Alarm,Tenderloin,Electrical Hazard,14
+Alarm,Treasure Island,Electrical Hazard,13
+Alarm,Twin Peaks,Electrical Hazard,11
+Alarm,Visitacion Valley,Electrical Hazard,21
+Alarm,West of Twin Peaks,Electrical Hazard,68
+Alarm,Western Addition,Electrical Hazard,14
+Alarm,Bayview Hunters Point,Elevator / Escalator Rescue,53
+Alarm,Bernal Heights,Elevator / Escalator Rescue,7
+Alarm,Castro/Upper Market,Elevator / Escalator Rescue,10
+Alarm,Chinatown,Elevator / Escalator Rescue,35
+Alarm,Excelsior,Elevator / Escalator Rescue,4
+Alarm,Financial District/South Beach,Elevator / Escalator Rescue,174
+Alarm,Glen Park,Elevator / Escalator Rescue,1
+Alarm,Haight Ashbury,Elevator / Escalator Rescue,1
+Alarm,Hayes Valley,Elevator / Escalator Rescue,37
+Alarm,Inner Richmond,Elevator / Escalator Rescue,6
+Alarm,Inner Sunset,Elevator / Escalator Rescue,8
+Alarm,Japantown,Elevator / Escalator Rescue,12
+Alarm,Lakeshore,Elevator / Escalator Rescue,15
+Alarm,Lincoln Park,Elevator / Escalator Rescue,1
+Alarm,Lone Mountain/USF,Elevator / Escalator Rescue,7
+Alarm,Marina,Elevator / Escalator Rescue,31
+Alarm,Mission,Elevator / Escalator Rescue,49
+Alarm,Mission Bay,Elevator / Escalator Rescue,55
+Alarm,Nob Hill,Elevator / Escalator Rescue,111
+Alarm,Noe Valley,Elevator / Escalator Rescue,3
+Alarm,North Beach,Elevator / Escalator Rescue,22
+Alarm,Oceanview/Merced/Ingleside,Elevator / Escalator Rescue,3
+Alarm,Outer Mission,Elevator / Escalator Rescue,8
+Alarm,Outer Richmond,Elevator / Escalator Rescue,10
+Alarm,Pacific Heights,Elevator / Escalator Rescue,42
+Alarm,Portola,Elevator / Escalator Rescue,1
+Alarm,Potrero Hill,Elevator / Escalator Rescue,26
+Alarm,Presidio,Elevator / Escalator Rescue,5
+Alarm,Presidio Heights,Elevator / Escalator Rescue,3
+Alarm,Russian Hill,Elevator / Escalator Rescue,19
+Alarm,Seacliff,Elevator / Escalator Rescue,2
+Alarm,South of Market,Elevator / Escalator Rescue,125
+Alarm,Sunset/Parkside,Elevator / Escalator Rescue,5
+Alarm,Tenderloin,Elevator / Escalator Rescue,207
+Alarm,Twin Peaks,Elevator / Escalator Rescue,4
+Alarm,Visitacion Valley,Elevator / Escalator Rescue,4
+Alarm,West of Twin Peaks,Elevator / Escalator Rescue,7
+Alarm,Western Addition,Elevator / Escalator Rescue,34
+Alarm,Bayview Hunters Point,Fuel Spill,53
+Alarm,Bernal Heights,Fuel Spill,4
+Alarm,Castro/Upper Market,Fuel Spill,9
+Alarm,Chinatown,Fuel Spill,5
+Alarm,Excelsior,Fuel Spill,2
+Alarm,Financial District/South Beach,Fuel Spill,21
+Alarm,Golden Gate Park,Fuel Spill,1
+Alarm,Haight Ashbury,Fuel Spill,5
+Alarm,Hayes Valley,Fuel Spill,4
+Alarm,Inner Richmond,Fuel Spill,10
+Alarm,Inner Sunset,Fuel Spill,8
+Alarm,Lakeshore,Fuel Spill,7
+Alarm,Lone Mountain/USF,Fuel Spill,4
+Alarm,Marina,Fuel Spill,14
+Alarm,Mission,Fuel Spill,18
+Alarm,Mission Bay,Fuel Spill,6
+Alarm,Nob Hill,Fuel Spill,3
+Alarm,Noe Valley,Fuel Spill,2
+Alarm,North Beach,Fuel Spill,4
+Alarm,Oceanview/Merced/Ingleside,Fuel Spill,6
+Alarm,Outer Mission,Fuel Spill,9
+Alarm,Outer Richmond,Fuel Spill,14
+Alarm,Pacific Heights,Fuel Spill,5
+Alarm,Portola,Fuel Spill,3
+Alarm,Potrero Hill,Fuel Spill,20
+Alarm,Presidio,Fuel Spill,6
+Alarm,Presidio Heights,Fuel Spill,7
+Alarm,Russian Hill,Fuel Spill,8
+Alarm,South of Market,Fuel Spill,18
+Alarm,Sunset/Parkside,Fuel Spill,19
+Alarm,Tenderloin,Fuel Spill,9
+Alarm,Treasure Island,Fuel Spill,12
+Alarm,Twin Peaks,Fuel Spill,4
+Alarm,Visitacion Valley,Fuel Spill,2
+Alarm,West of Twin Peaks,Fuel Spill,9
+Alarm,Western Addition,Fuel Spill,9
+Alarm,Bayview Hunters Point,Gas Leak (Natural and LP Gases),114
+Alarm,Bernal Heights,Gas Leak (Natural and LP Gases),61
+Alarm,Castro/Upper Market,Gas Leak (Natural and LP Gases),49
+Alarm,Chinatown,Gas Leak (Natural and LP Gases),30
+Alarm,Excelsior,Gas Leak (Natural and LP Gases),39
+Alarm,Financial District/South Beach,Gas Leak (Natural and LP Gases),89
+Alarm,Glen Park,Gas Leak (Natural and LP Gases),14
+Alarm,Golden Gate Park,Gas Leak (Natural and LP Gases),4
+Alarm,Haight Ashbury,Gas Leak (Natural and LP Gases),57
+Alarm,Hayes Valley,Gas Leak (Natural and LP Gases),63
+Alarm,Inner Richmond,Gas Leak (Natural and LP Gases),63
+Alarm,Inner Sunset,Gas Leak (Natural and LP Gases),36
+Alarm,Japantown,Gas Leak (Natural and LP Gases),9
+Alarm,Lakeshore,Gas Leak (Natural and LP Gases),57
+Alarm,Lincoln Park,Gas Leak (Natural and LP Gases),3
+Alarm,Lone Mountain/USF,Gas Leak (Natural and LP Gases),25
+Alarm,Marina,Gas Leak (Natural and LP Gases),76
+Alarm,Mission,Gas Leak (Natural and LP Gases),178
+Alarm,Mission Bay,Gas Leak (Natural and LP Gases),18
+Alarm,Nob Hill,Gas Leak (Natural and LP Gases),86
+Alarm,Noe Valley,Gas Leak (Natural and LP Gases),46
+Alarm,None,Gas Leak (Natural and LP Gases),3
+Alarm,North Beach,Gas Leak (Natural and LP Gases),25
+Alarm,Oceanview/Merced/Ingleside,Gas Leak (Natural and LP Gases),33
+Alarm,Outer Mission,Gas Leak (Natural and LP Gases),26
+Alarm,Outer Richmond,Gas Leak (Natural and LP Gases),99
+Alarm,Pacific Heights,Gas Leak (Natural and LP Gases),51
+Alarm,Portola,Gas Leak (Natural and LP Gases),13
+Alarm,Potrero Hill,Gas Leak (Natural and LP Gases),85
+Alarm,Presidio,Gas Leak (Natural and LP Gases),6
+Alarm,Presidio Heights,Gas Leak (Natural and LP Gases),43
+Alarm,Russian Hill,Gas Leak (Natural and LP Gases),28
+Alarm,Seacliff,Gas Leak (Natural and LP Gases),6
+Alarm,South of Market,Gas Leak (Natural and LP Gases),63
+Alarm,Sunset/Parkside,Gas Leak (Natural and LP Gases),62
+Alarm,Tenderloin,Gas Leak (Natural and LP Gases),118
+Alarm,Treasure Island,Gas Leak (Natural and LP Gases),33
+Alarm,Twin Peaks,Gas Leak (Natural and LP Gases),13
+Alarm,Visitacion Valley,Gas Leak (Natural and LP Gases),31
+Alarm,West of Twin Peaks,Gas Leak (Natural and LP Gases),44
+Alarm,Western Addition,Gas Leak (Natural and LP Gases),96
+Alarm,Bayview Hunters Point,HazMat,5
+Alarm,Castro/Upper Market,HazMat,9
+Alarm,Chinatown,HazMat,3
+Alarm,Excelsior,HazMat,3
+Alarm,Financial District/South Beach,HazMat,9
+Alarm,Glen Park,HazMat,3
+Alarm,Haight Ashbury,HazMat,3
+Alarm,Hayes Valley,HazMat,4
+Alarm,Inner Richmond,HazMat,3
+Alarm,Marina,HazMat,6
+Alarm,Mission,HazMat,9
+Alarm,Mission Bay,HazMat,3
+Alarm,Nob Hill,HazMat,5
+Alarm,Noe Valley,HazMat,3
+Alarm,Outer Mission,HazMat,6
+Alarm,Outer Richmond,HazMat,6
+Alarm,Pacific Heights,HazMat,3
+Alarm,Russian Hill,HazMat,2
+Alarm,South of Market,HazMat,7
+Alarm,Tenderloin,HazMat,12
+Alarm,Visitacion Valley,HazMat,3
+Alarm,Western Addition,HazMat,9
+Alarm,Bayview Hunters Point,Medical Incident,1
+Alarm,Bernal Heights,Medical Incident,4
+Alarm,Castro/Upper Market,Medical Incident,2
+Alarm,Chinatown,Medical Incident,2
+Alarm,Excelsior,Medical Incident,27
+Alarm,Financial District/South Beach,Medical Incident,3
+Alarm,Haight Ashbury,Medical Incident,1
+Alarm,Hayes Valley,Medical Incident,23
+Alarm,Inner Richmond,Medical Incident,2
+Alarm,Inner Sunset,Medical Incident,7
+Alarm,Japantown,Medical Incident,9
+Alarm,Lakeshore,Medical Incident,3
+Alarm,Lone Mountain/USF,Medical Incident,3
+Alarm,Marina,Medical Incident,3
+Alarm,Mission,Medical Incident,6
+Alarm,Mission Bay,Medical Incident,4
+Alarm,Nob Hill,Medical Incident,5
+Alarm,North Beach,Medical Incident,12
+Alarm,Oceanview/Merced/Ingleside,Medical Incident,2
+Alarm,Outer Mission,Medical Incident,2
+Alarm,Outer Richmond,Medical Incident,3
+Alarm,Pacific Heights,Medical Incident,10
+Alarm,Portola,Medical Incident,9
+Alarm,Presidio Heights,Medical Incident,8
+Alarm,Russian Hill,Medical Incident,3
+Alarm,Seacliff,Medical Incident,1
+Alarm,South of Market,Medical Incident,5
+Alarm,Sunset/Parkside,Medical Incident,22
+Alarm,Tenderloin,Medical Incident,8
+Alarm,Twin Peaks,Medical Incident,27
+Alarm,Visitacion Valley,Medical Incident,5
+Alarm,West of Twin Peaks,Medical Incident,3
+Alarm,Western Addition,Medical Incident,17
+Alarm,Bayview Hunters Point,Odor (Strange / Unknown),17
+Alarm,Bernal Heights,Odor (Strange / Unknown),4
+Alarm,Castro/Upper Market,Odor (Strange / Unknown),4
+Alarm,Chinatown,Odor (Strange / Unknown),4
+Alarm,Excelsior,Odor (Strange / Unknown),12
+Alarm,Financial District/South Beach,Odor (Strange / Unknown),9
+Alarm,Glen Park,Odor (Strange / Unknown),2
+Alarm,Haight Ashbury,Odor (Strange / Unknown),6
+Alarm,Hayes Valley,Odor (Strange / Unknown),10
+Alarm,Inner Richmond,Odor (Strange / Unknown),6
+Alarm,Inner Sunset,Odor (Strange / Unknown),7
+Alarm,Lakeshore,Odor (Strange / Unknown),1
+Alarm,Lone Mountain/USF,Odor (Strange / Unknown),1
+Alarm,Marina,Odor (Strange / Unknown),4
+Alarm,Mission,Odor (Strange / Unknown),36
+Alarm,Nob Hill,Odor (Strange / Unknown),13
+Alarm,Oceanview/Merced/Ingleside,Odor (Strange / Unknown),8
+Alarm,Outer Mission,Odor (Strange / Unknown),2
+Alarm,Outer Richmond,Odor (Strange / Unknown),7
+Alarm,Pacific Heights,Odor (Strange / Unknown),5
+Alarm,Portola,Odor (Strange / Unknown),2
+Alarm,Potrero Hill,Odor (Strange / Unknown),9
+Alarm,Russian Hill,Odor (Strange / Unknown),3
+Alarm,South of Market,Odor (Strange / Unknown),17
+Alarm,Sunset/Parkside,Odor (Strange / Unknown),6
+Alarm,Tenderloin,Odor (Strange / Unknown),22
+Alarm,Treasure Island,Odor (Strange / Unknown),8
+Alarm,Twin Peaks,Odor (Strange / Unknown),1
+Alarm,Visitacion Valley,Odor (Strange / Unknown),2
+Alarm,West of Twin Peaks,Odor (Strange / Unknown),10
+Alarm,Western Addition,Odor (Strange / Unknown),20
+Alarm,Bayview Hunters Point,Other,185
+Alarm,Bernal Heights,Other,60
+Alarm,Castro/Upper Market,Other,84
+Alarm,Chinatown,Other,61
+Alarm,Excelsior,Other,65
+Alarm,Financial District/South Beach,Other,215
+Alarm,Glen Park,Other,31
+Alarm,Golden Gate Park,Other,18
+Alarm,Haight Ashbury,Other,29
+Alarm,Hayes Valley,Other,86
+Alarm,Inner Richmond,Other,49
+Alarm,Inner Sunset,Other,90
+Alarm,Japantown,Other,28
+Alarm,Lakeshore,Other,33
+Alarm,Lincoln Park,Other,3
+Alarm,Lone Mountain/USF,Other,21
+Alarm,Marina,Other,73
+Alarm,McLaren Park,Other,2
+Alarm,Mission,Other,244
+Alarm,Mission Bay,Other,47
+Alarm,Nob Hill,Other,79
+Alarm,Noe Valley,Other,58
+Alarm,None,Other,58
+Alarm,North Beach,Other,70
+Alarm,Oceanview/Merced/Ingleside,Other,51
+Alarm,Outer Mission,Other,31
+Alarm,Outer Richmond,Other,73
+Alarm,Pacific Heights,Other,68
+Alarm,Portola,Other,34
+Alarm,Potrero Hill,Other,82
+Alarm,Presidio,Other,9
+Alarm,Presidio Heights,Other,33
+Alarm,Russian Hill,Other,56
+Alarm,Seacliff,Other,1
+Alarm,South of Market,Other,240
+Alarm,Sunset/Parkside,Other,114
+Alarm,Tenderloin,Other,192
+Alarm,Treasure Island,Other,21
+Alarm,Twin Peaks,Other,35
+Alarm,Visitacion Valley,Other,23
+Alarm,West of Twin Peaks,Other,122
+Alarm,Western Addition,Other,66
+Alarm,Bayview Hunters Point,Outside Fire,2
+Alarm,Bernal Heights,Outside Fire,2
+Alarm,Castro/Upper Market,Outside Fire,3
+Alarm,Chinatown,Outside Fire,1
+Alarm,Financial District/South Beach,Outside Fire,325
+Alarm,Golden Gate Park,Outside Fire,2
+Alarm,Haight Ashbury,Outside Fire,1
+Alarm,Hayes Valley,Outside Fire,2
+Alarm,Inner Richmond,Outside Fire,2
+Alarm,Inner Sunset,Outside Fire,1
+Alarm,Japantown,Outside Fire,1
+Alarm,Lakeshore,Outside Fire,1
+Alarm,Lone Mountain/USF,Outside Fire,1
+Alarm,Mission,Outside Fire,5
+Alarm,Nob Hill,Outside Fire,1
+Alarm,North Beach,Outside Fire,59
+Alarm,Outer Richmond,Outside Fire,3
+Alarm,Russian Hill,Outside Fire,7
+Alarm,South of Market,Outside Fire,2
+Alarm,Sunset/Parkside,Outside Fire,2
+Alarm,Tenderloin,Outside Fire,2
+Alarm,Twin Peaks,Outside Fire,1
+Alarm,West of Twin Peaks,Outside Fire,7
+Alarm,Western Addition,Outside Fire,3
+Alarm,Bayview Hunters Point,Smoke Investigation (Outside),75
+Alarm,Bernal Heights,Smoke Investigation (Outside),29
+Alarm,Castro/Upper Market,Smoke Investigation (Outside),16
+Alarm,Chinatown,Smoke Investigation (Outside),15
+Alarm,Excelsior,Smoke Investigation (Outside),9
+Alarm,Financial District/South Beach,Smoke Investigation (Outside),29
+Alarm,Glen Park,Smoke Investigation (Outside),7
+Alarm,Golden Gate Park,Smoke Investigation (Outside),18
+Alarm,Haight Ashbury,Smoke Investigation (Outside),17
+Alarm,Hayes Valley,Smoke Investigation (Outside),9
+Alarm,Inner Richmond,Smoke Investigation (Outside),13
+Alarm,Inner Sunset,Smoke Investigation (Outside),22
+Alarm,Japantown,Smoke Investigation (Outside),2
+Alarm,Lakeshore,Smoke Investigation (Outside),5
+Alarm,Lincoln Park,Smoke Investigation (Outside),12
+Alarm,Lone Mountain/USF,Smoke Investigation (Outside),8
+Alarm,Marina,Smoke Investigation (Outside),10
+Alarm,McLaren Park,Smoke Investigation (Outside),17
+Alarm,Mission,Smoke Investigation (Outside),84
+Alarm,Mission Bay,Smoke Investigation (Outside),4
+Alarm,Nob Hill,Smoke Investigation (Outside),27
+Alarm,Noe Valley,Smoke Investigation (Outside),15
+Alarm,North Beach,Smoke Investigation (Outside),5
+Alarm,Oceanview/Merced/Ingleside,Smoke Investigation (Outside),7
+Alarm,Outer Mission,Smoke Investigation (Outside),5
+Alarm,Outer Richmond,Smoke Investigation (Outside),35
+Alarm,Pacific Heights,Smoke Investigation (Outside),6
+Alarm,Portola,Smoke Investigation (Outside),14
+Alarm,Potrero Hill,Smoke Investigation (Outside),23
+Alarm,Presidio,Smoke Investigation (Outside),2
+Alarm,Presidio Heights,Smoke Investigation (Outside),5
+Alarm,Russian Hill,Smoke Investigation (Outside),37
+Alarm,Seacliff,Smoke Investigation (Outside),2
+Alarm,South of Market,Smoke Investigation (Outside),38
+Alarm,Sunset/Parkside,Smoke Investigation (Outside),23
+Alarm,Tenderloin,Smoke Investigation (Outside),16
+Alarm,Treasure Island,Smoke Investigation (Outside),13
+Alarm,Twin Peaks,Smoke Investigation (Outside),12
+Alarm,Visitacion Valley,Smoke Investigation (Outside),7
+Alarm,West of Twin Peaks,Smoke Investigation (Outside),31
+Alarm,Western Addition,Smoke Investigation (Outside),13
+Alarm,Bayview Hunters Point,Structure Fire,"1,018"
+Alarm,Bernal Heights,Structure Fire,416
+Alarm,Castro/Upper Market,Structure Fire,617
+Alarm,Chinatown,Structure Fire,276
+Alarm,Excelsior,Structure Fire,429
+Alarm,Financial District/South Beach,Structure Fire,"1,380"
+Alarm,Glen Park,Structure Fire,125
+Alarm,Golden Gate Park,Structure Fire,80
+Alarm,Haight Ashbury,Structure Fire,402
+Alarm,Hayes Valley,Structure Fire,843
+Alarm,Inner Richmond,Structure Fire,356
+Alarm,Inner Sunset,Structure Fire,446
+Alarm,Japantown,Structure Fire,195
+Alarm,Lakeshore,Structure Fire,261
+Alarm,Lincoln Park,Structure Fire,13
+Alarm,Lone Mountain/USF,Structure Fire,362
+Alarm,Marina,Structure Fire,904
+Alarm,McLaren Park,Structure Fire,29
+Alarm,Mission,Structure Fire,"2,118"
+Alarm,Mission Bay,Structure Fire,292
+Alarm,Nob Hill,Structure Fire,"1,435"
+Alarm,Noe Valley,Structure Fire,317
+Alarm,None,Structure Fire,5
+Alarm,North Beach,Structure Fire,316
+Alarm,Oceanview/Merced/Ingleside,Structure Fire,289
+Alarm,Outer Mission,Structure Fire,204
+Alarm,Outer Richmond,Structure Fire,716
+Alarm,Pacific Heights,Structure Fire,661
+Alarm,Portola,Structure Fire,156
+Alarm,Potrero Hill,Structure Fire,317
+Alarm,Presidio,Structure Fire,30
+Alarm,Presidio Heights,Structure Fire,253
+Alarm,Russian Hill,Structure Fire,419
+Alarm,Seacliff,Structure Fire,48
+Alarm,South of Market,Structure Fire,"1,478"
+Alarm,Sunset/Parkside,Structure Fire,866
+Alarm,Tenderloin,Structure Fire,"2,254"
+Alarm,Treasure Island,Structure Fire,155
+Alarm,Twin Peaks,Structure Fire,124
+Alarm,Visitacion Valley,Structure Fire,212
+Alarm,West of Twin Peaks,Structure Fire,591
+Alarm,Western Addition,Structure Fire,961
+Fire,Bayview Hunters Point,Confined Space / Structure Collapse,6
+Fire,Japantown,Confined Space / Structure Collapse,6
+Fire,Marina,Confined Space / Structure Collapse,7
+Fire,Mission,Confined Space / Structure Collapse,9
+Fire,Potrero Hill,Confined Space / Structure Collapse,14
+Fire,South of Market,Confined Space / Structure Collapse,6
+Fire,West of Twin Peaks,Confined Space / Structure Collapse,6
+Fire,Bayview Hunters Point,Explosion,3
+Fire,Castro/Upper Market,Explosion,10
+Fire,Chinatown,Explosion,4
+Fire,Financial District/South Beach,Explosion,5
+Fire,Glen Park,Explosion,5
+Fire,Haight Ashbury,Explosion,9
+Fire,Marina,Explosion,5
+Fire,Mission Bay,Explosion,6
+Fire,Nob Hill,Explosion,4
+Fire,Noe Valley,Explosion,7
+Fire,Outer Mission,Explosion,4
+Fire,Outer Richmond,Explosion,5
+Fire,Pacific Heights,Explosion,13
+Fire,Potrero Hill,Explosion,12
+Fire,South of Market,Explosion,22
+Fire,Sunset/Parkside,Explosion,7
+Fire,Tenderloin,Explosion,4
+Fire,Twin Peaks,Explosion,4
+Fire,West of Twin Peaks,Explosion,1
+Fire,Bayview Hunters Point,"Extrication / Entrapped (Machinery, Vehicle)",13
+Fire,Castro/Upper Market,"Extrication / Entrapped (Machinery, Vehicle)",2
+Fire,Financial District/South Beach,"Extrication / Entrapped (Machinery, Vehicle)",7
+Fire,Japantown,"Extrication / Entrapped (Machinery, Vehicle)",7
+Fire,Noe Valley,"Extrication / Entrapped (Machinery, Vehicle)",6
+Fire,Oceanview/Merced/Ingleside,"Extrication / Entrapped (Machinery, Vehicle)",2
+Fire,West of Twin Peaks,"Extrication / Entrapped (Machinery, Vehicle)",5
+Fire,Bayview Hunters Point,HazMat,2
+Fire,Financial District/South Beach,HazMat,2
+Fire,Haight Ashbury,HazMat,2
+Fire,Hayes Valley,HazMat,3
+Fire,Marina,HazMat,2
+Fire,Mission,HazMat,5
+Fire,Outer Richmond,HazMat,2
+Fire,Pacific Heights,HazMat,1
+Fire,South of Market,HazMat,3
+Fire,West of Twin Peaks,HazMat,4
+Fire,Western Addition,HazMat,2
+Fire,Financial District/South Beach,High Angle Rescue,7
+Fire,Lakeshore,High Angle Rescue,9
+Fire,North Beach,High Angle Rescue,7
+Fire,Seacliff,High Angle Rescue,9
+Fire,Twin Peaks,High Angle Rescue,8
+Fire,Bayview Hunters Point,Industrial Accidents,20
+Fire,Chinatown,Industrial Accidents,3
+Fire,Financial District/South Beach,Industrial Accidents,26
+Fire,Golden Gate Park,Industrial Accidents,3
+Fire,Lone Mountain/USF,Industrial Accidents,8
+Fire,Mission,Industrial Accidents,10
+Fire,Mission Bay,Industrial Accidents,9
+Fire,Nob Hill,Industrial Accidents,8
+Fire,North Beach,Industrial Accidents,3
+Fire,Outer Mission,Industrial Accidents,6
+Fire,South of Market,Industrial Accidents,6
+Fire,Tenderloin,Industrial Accidents,6
+Fire,Treasure Island,Industrial Accidents,4
+Fire,West of Twin Peaks,Industrial Accidents,5
+Fire,Bayview Hunters Point,Marine Fire,14
+Fire,North Beach,Marine Fire,11
+Fire,Mission,Mutual Aid / Assist Outside Agency,11
+Fire,Outer Richmond,Odor (Strange / Unknown),1
+Fire,Castro/Upper Market,Other,3
+Fire,Financial District/South Beach,Other,11
+Fire,Inner Sunset,Other,1
+Fire,Japantown,Other,1
+Fire,Lone Mountain/USF,Other,2
+Fire,Mission,Other,1
+Fire,North Beach,Other,12
+Fire,Potrero Hill,Other,6
+Fire,Presidio,Other,219
+Fire,South of Market,Other,11
+Fire,Tenderloin,Other,19
+Fire,Treasure Island,Other,53
+Fire,Western Addition,Other,3
+Fire,Bayview Hunters Point,Outside Fire,618
+Fire,Bernal Heights,Outside Fire,180
+Fire,Castro/Upper Market,Outside Fire,153
+Fire,Chinatown,Outside Fire,59
+Fire,Excelsior,Outside Fire,41
+Fire,Financial District/South Beach,Outside Fire,283
+Fire,Glen Park,Outside Fire,15
+Fire,Golden Gate Park,Outside Fire,101
+Fire,Haight Ashbury,Outside Fire,87
+Fire,Hayes Valley,Outside Fire,114
+Fire,Inner Richmond,Outside Fire,40
+Fire,Inner Sunset,Outside Fire,26
+Fire,Japantown,Outside Fire,8
+Fire,Lakeshore,Outside Fire,37
+Fire,Lincoln Park,Outside Fire,13
+Fire,Lone Mountain/USF,Outside Fire,19
+Fire,Marina,Outside Fire,51
+Fire,McLaren Park,Outside Fire,42
+Fire,Mission,Outside Fire,393
+Fire,Mission Bay,Outside Fire,105
+Fire,Nob Hill,Outside Fire,80
+Fire,Noe Valley,Outside Fire,19
+Fire,None,Outside Fire,6
+Fire,North Beach,Outside Fire,49
+Fire,Oceanview/Merced/Ingleside,Outside Fire,45
+Fire,Outer Mission,Outside Fire,51
+Fire,Outer Richmond,Outside Fire,81
+Fire,Pacific Heights,Outside Fire,40
+Fire,Portola,Outside Fire,40
+Fire,Potrero Hill,Outside Fire,157
+Fire,Presidio,Outside Fire,19
+Fire,Presidio Heights,Outside Fire,11
+Fire,Russian Hill,Outside Fire,23
+Fire,Seacliff,Outside Fire,18
+Fire,South of Market,Outside Fire,217
+Fire,Sunset/Parkside,Outside Fire,103
+Fire,Tenderloin,Outside Fire,190
+Fire,Treasure Island,Outside Fire,55
+Fire,Twin Peaks,Outside Fire,14
+Fire,Visitacion Valley,Outside Fire,99
+Fire,West of Twin Peaks,Outside Fire,56
+Fire,Western Addition,Outside Fire,95
+Fire,Bayview Hunters Point,Structure Fire,322
+Fire,Bernal Heights,Structure Fire,102
+Fire,Castro/Upper Market,Structure Fire,77
+Fire,Chinatown,Structure Fire,28
+Fire,Excelsior,Structure Fire,99
+Fire,Financial District/South Beach,Structure Fire,58
+Fire,Glen Park,Structure Fire,53
+Fire,Haight Ashbury,Structure Fire,52
+Fire,Hayes Valley,Structure Fire,38
+Fire,Inner Richmond,Structure Fire,55
+Fire,Inner Sunset,Structure Fire,51
+Fire,Japantown,Structure Fire,11
+Fire,Lakeshore,Structure Fire,38
+Fire,Lone Mountain/USF,Structure Fire,100
+Fire,Marina,Structure Fire,44
+Fire,Mission,Structure Fire,331
+Fire,Mission Bay,Structure Fire,42
+Fire,Nob Hill,Structure Fire,33
+Fire,Noe Valley,Structure Fire,42
+Fire,North Beach,Structure Fire,52
+Fire,Oceanview/Merced/Ingleside,Structure Fire,61
+Fire,Outer Mission,Structure Fire,90
+Fire,Outer Richmond,Structure Fire,167
+Fire,Pacific Heights,Structure Fire,66
+Fire,Portola,Structure Fire,37
+Fire,Potrero Hill,Structure Fire,114
+Fire,Presidio,Structure Fire,14
+Fire,Presidio Heights,Structure Fire,29
+Fire,Russian Hill,Structure Fire,94
+Fire,Seacliff,Structure Fire,25
+Fire,South of Market,Structure Fire,137
+Fire,Sunset/Parkside,Structure Fire,140
+Fire,Tenderloin,Structure Fire,58
+Fire,Twin Peaks,Structure Fire,28
+Fire,Visitacion Valley,Structure Fire,74
+Fire,West of Twin Peaks,Structure Fire,78
+Fire,Western Addition,Structure Fire,79
+Fire,Financial District/South Beach,Train / Rail Incident,61
+Fire,Mission,Train / Rail Incident,7
+Fire,Mission Bay,Train / Rail Incident,8
+Fire,Outer Mission,Train / Rail Incident,13
+Fire,West of Twin Peaks,Train / Rail Incident,14
+Fire,Bayview Hunters Point,Vehicle Fire,178
+Fire,Bernal Heights,Vehicle Fire,45
+Fire,Castro/Upper Market,Vehicle Fire,18
+Fire,Chinatown,Vehicle Fire,8
+Fire,Excelsior,Vehicle Fire,20
+Fire,Financial District/South Beach,Vehicle Fire,81
+Fire,Golden Gate Park,Vehicle Fire,18
+Fire,Haight Ashbury,Vehicle Fire,7
+Fire,Hayes Valley,Vehicle Fire,40
+Fire,Inner Richmond,Vehicle Fire,8
+Fire,Inner Sunset,Vehicle Fire,9
+Fire,Lakeshore,Vehicle Fire,13
+Fire,Lincoln Park,Vehicle Fire,3
+Fire,Lone Mountain/USF,Vehicle Fire,1
+Fire,Marina,Vehicle Fire,12
+Fire,Mission,Vehicle Fire,73
+Fire,Mission Bay,Vehicle Fire,12
+Fire,Nob Hill,Vehicle Fire,16
+Fire,Noe Valley,Vehicle Fire,9
+Fire,North Beach,Vehicle Fire,14
+Fire,Oceanview/Merced/Ingleside,Vehicle Fire,16
+Fire,Outer Mission,Vehicle Fire,17
+Fire,Outer Richmond,Vehicle Fire,23
+Fire,Pacific Heights,Vehicle Fire,23
+Fire,Portola,Vehicle Fire,18
+Fire,Potrero Hill,Vehicle Fire,50
+Fire,Presidio,Vehicle Fire,13
+Fire,Presidio Heights,Vehicle Fire,16
+Fire,Russian Hill,Vehicle Fire,14
+Fire,South of Market,Vehicle Fire,41
+Fire,Sunset/Parkside,Vehicle Fire,44
+Fire,Tenderloin,Vehicle Fire,78
+Fire,Treasure Island,Vehicle Fire,64
+Fire,Twin Peaks,Vehicle Fire,5
+Fire,Visitacion Valley,Vehicle Fire,9
+Fire,West of Twin Peaks,Vehicle Fire,14
+Fire,Western Addition,Vehicle Fire,15
+Fire,Bayview Hunters Point,Water Rescue,90
+Fire,Bernal Heights,Water Rescue,1
+Fire,Financial District/South Beach,Water Rescue,275
+Fire,Golden Gate Park,Water Rescue,23
+Fire,Hayes Valley,Water Rescue,13
+Fire,Lakeshore,Water Rescue,193
+Fire,Lincoln Park,Water Rescue,84
+Fire,Marina,Water Rescue,156
+Fire,Mission Bay,Water Rescue,54
+Fire,Nob Hill,Water Rescue,69
+Fire,None,Water Rescue,31
+Fire,North Beach,Water Rescue,167
+Fire,Outer Richmond,Water Rescue,236
+Fire,Portola,Water Rescue,6
+Fire,Presidio,Water Rescue,283
+Fire,Russian Hill,Water Rescue,119
+Fire,Seacliff,Water Rescue,26
+Fire,Sunset/Parkside,Water Rescue,147
+Fire,Tenderloin,Water Rescue,29
+Fire,Treasure Island,Water Rescue,11
+Fire,Financial District/South Beach,Watercraft in Distress,12
+Fire,Mission Bay,Watercraft in Distress,15
+Fire,North Beach,Watercraft in Distress,1
+Fire,Outer Richmond,Watercraft in Distress,14
+Non Life-threatening,Bayview Hunters Point,Medical Incident,"3,473"
+Non Life-threatening,Bernal Heights,Medical Incident,"1,180"
+Non Life-threatening,Castro/Upper Market,Medical Incident,"2,145"
+Non Life-threatening,Chinatown,Medical Incident,"1,482"
+Non Life-threatening,Excelsior,Medical Incident,"1,452"
+Non Life-threatening,Financial District/South Beach,Medical Incident,"4,981"
+Non Life-threatening,Glen Park,Medical Incident,326
+Non Life-threatening,Golden Gate Park,Medical Incident,435
+Non Life-threatening,Haight Ashbury,Medical Incident,895
+Non Life-threatening,Hayes Valley,Medical Incident,"1,539"
+Non Life-threatening,Inner Richmond,Medical Incident,913
+Non Life-threatening,Inner Sunset,Medical Incident,938
+Non Life-threatening,Japantown,Medical Incident,724
+Non Life-threatening,Lakeshore,Medical Incident,"1,292"
+Non Life-threatening,Lincoln Park,Medical Incident,40
+Non Life-threatening,Lone Mountain/USF,Medical Incident,929
+Non Life-threatening,Marina,Medical Incident,"1,167"
+Non Life-threatening,McLaren Park,Medical Incident,81
+Non Life-threatening,Mission,Medical Incident,"7,244"
+Non Life-threatening,Mission Bay,Medical Incident,"1,304"
+Non Life-threatening,Nob Hill,Medical Incident,"2,218"
+Non Life-threatening,Noe Valley,Medical Incident,623
+Non Life-threatening,None,Medical Incident,37
+Non Life-threatening,North Beach,Medical Incident,"1,486"
+Non Life-threatening,Oceanview/Merced/Ingleside,Medical Incident,743
+Non Life-threatening,Outer Mission,Medical Incident,"1,092"
+Non Life-threatening,Outer Richmond,Medical Incident,"1,679"
+Non Life-threatening,Pacific Heights,Medical Incident,"1,391"
+Non Life-threatening,Portola,Medical Incident,758
+Non Life-threatening,Potrero Hill,Medical Incident,"1,073"
+Non Life-threatening,Presidio,Medical Incident,324
+Non Life-threatening,Presidio Heights,Medical Incident,572
+Non Life-threatening,Russian Hill,Medical Incident,970
+Non Life-threatening,Seacliff,Medical Incident,92
+Non Life-threatening,South of Market,Medical Incident,"8,595"
+Non Life-threatening,Sunset/Parkside,Medical Incident,"2,822"
+Non Life-threatening,Tenderloin,Medical Incident,"11,231"
+Non Life-threatening,Treasure Island,Medical Incident,429
+Non Life-threatening,Twin Peaks,Medical Incident,425
+Non Life-threatening,Visitacion Valley,Medical Incident,767
+Non Life-threatening,West of Twin Peaks,Medical Incident,"1,766"
+Non Life-threatening,Western Addition,Medical Incident,"2,392"
+Non Life-threatening,Bayview Hunters Point,Other,48
+Non Life-threatening,Bernal Heights,Other,12
+Non Life-threatening,Castro/Upper Market,Other,23
+Non Life-threatening,Chinatown,Other,5
+Non Life-threatening,Excelsior,Other,13
+Non Life-threatening,Financial District/South Beach,Other,36
+Non Life-threatening,Glen Park,Other,7
+Non Life-threatening,Golden Gate Park,Other,3
+Non Life-threatening,Haight Ashbury,Other,7
+Non Life-threatening,Hayes Valley,Other,14
+Non Life-threatening,Inner Richmond,Other,6
+Non Life-threatening,Inner Sunset,Other,12
+Non Life-threatening,Lakeshore,Other,13
+Non Life-threatening,Lone Mountain/USF,Other,13
+Non Life-threatening,Marina,Other,10
+Non Life-threatening,McLaren Park,Other,1
+Non Life-threatening,Mission,Other,100
+Non Life-threatening,Mission Bay,Other,15
+Non Life-threatening,Nob Hill,Other,37
+Non Life-threatening,Noe Valley,Other,16
+Non Life-threatening,North Beach,Other,12
+Non Life-threatening,Oceanview/Merced/Ingleside,Other,27
+Non Life-threatening,Outer Mission,Other,23
+Non Life-threatening,Outer Richmond,Other,11
+Non Life-threatening,Pacific Heights,Other,8
+Non Life-threatening,Portola,Other,2
+Non Life-threatening,Potrero Hill,Other,31
+Non Life-threatening,Presidio Heights,Other,2
+Non Life-threatening,Russian Hill,Other,13
+Non Life-threatening,South of Market,Other,70
+Non Life-threatening,Sunset/Parkside,Other,26
+Non Life-threatening,Tenderloin,Other,63
+Non Life-threatening,Treasure Island,Other,6
+Non Life-threatening,Twin Peaks,Other,1
+Non Life-threatening,Visitacion Valley,Other,15
+Non Life-threatening,West of Twin Peaks,Other,20
+Non Life-threatening,Western Addition,Other,20
+Non Life-threatening,Bayview Hunters Point,Traffic Collision,463
+Non Life-threatening,Bernal Heights,Traffic Collision,235
+Non Life-threatening,Castro/Upper Market,Traffic Collision,84
+Non Life-threatening,Chinatown,Traffic Collision,27
+Non Life-threatening,Excelsior,Traffic Collision,76
+Non Life-threatening,Financial District/South Beach,Traffic Collision,347
+Non Life-threatening,Glen Park,Traffic Collision,22
+Non Life-threatening,Golden Gate Park,Traffic Collision,106
+Non Life-threatening,Haight Ashbury,Traffic Collision,40
+Non Life-threatening,Hayes Valley,Traffic Collision,234
+Non Life-threatening,Inner Richmond,Traffic Collision,100
+Non Life-threatening,Inner Sunset,Traffic Collision,43
+Non Life-threatening,Japantown,Traffic Collision,19
+Non Life-threatening,Lakeshore,Traffic Collision,116
+Non Life-threatening,Lone Mountain/USF,Traffic Collision,38
+Non Life-threatening,Marina,Traffic Collision,97
+Non Life-threatening,McLaren Park,Traffic Collision,7
+Non Life-threatening,Mission,Traffic Collision,412
+Non Life-threatening,Mission Bay,Traffic Collision,66
+Non Life-threatening,Nob Hill,Traffic Collision,90
+Non Life-threatening,Noe Valley,Traffic Collision,65
+Non Life-threatening,None,Traffic Collision,14
+Non Life-threatening,North Beach,Traffic Collision,34
+Non Life-threatening,Oceanview/Merced/Ingleside,Traffic Collision,131
+Non Life-threatening,Outer Mission,Traffic Collision,200
+Non Life-threatening,Outer Richmond,Traffic Collision,121
+Non Life-threatening,Pacific Heights,Traffic Collision,89
+Non Life-threatening,Portola,Traffic Collision,125
+Non Life-threatening,Potrero Hill,Traffic Collision,128
+Non Life-threatening,Presidio,Traffic Collision,47
+Non Life-threatening,Presidio Heights,Traffic Collision,33
+Non Life-threatening,Russian Hill,Traffic Collision,73
+Non Life-threatening,Seacliff,Traffic Collision,8
+Non Life-threatening,South of Market,Traffic Collision,354
+Non Life-threatening,Sunset/Parkside,Traffic Collision,191
+Non Life-threatening,Tenderloin,Traffic Collision,171
+Non Life-threatening,Treasure Island,Traffic Collision,214
+Non Life-threatening,Twin Peaks,Traffic Collision,16
+Non Life-threatening,Visitacion Valley,Traffic Collision,22
+Non Life-threatening,West of Twin Peaks,Traffic Collision,186
+Non Life-threatening,Western Addition,Traffic Collision,179
+Potentially Life-Threatening,Bayview Hunters Point,Medical Incident,"7,520"
+Potentially Life-Threatening,Bernal Heights,Medical Incident,"2,076"
+Potentially Life-Threatening,Castro/Upper Market,Medical Incident,"3,389"
+Potentially Life-Threatening,Chinatown,Medical Incident,"2,351"
+Potentially Life-Threatening,Excelsior,Medical Incident,"3,143"
+Potentially Life-Threatening,Financial District/South Beach,Medical Incident,"9,267"
+Potentially Life-Threatening,Glen Park,Medical Incident,683
+Potentially Life-Threatening,Golden Gate Park,Medical Incident,532
+Potentially Life-Threatening,Haight Ashbury,Medical Incident,"1,630"
+Potentially Life-Threatening,Hayes Valley,Medical Incident,"3,295"
+Potentially Life-Threatening,Inner Richmond,Medical Incident,"1,524"
+Potentially Life-Threatening,Inner Sunset,Medical Incident,"1,721"
+Potentially Life-Threatening,Japantown,Medical Incident,"1,338"
+Potentially Life-Threatening,Lakeshore,Medical Incident,"1,726"
+Potentially Life-Threatening,Lincoln Park,Medical Incident,79
+Potentially Life-Threatening,Lone Mountain/USF,Medical Incident,"1,421"
+Potentially Life-Threatening,Marina,Medical Incident,"2,127"
+Potentially Life-Threatening,McLaren Park,Medical Incident,109
+Potentially Life-Threatening,Mission,Medical Incident,"13,544"
+Potentially Life-Threatening,Mission Bay,Medical Incident,"2,037"
+Potentially Life-Threatening,Nob Hill,Medical Incident,"4,422"
+Potentially Life-Threatening,Noe Valley,Medical Incident,"1,090"
+Potentially Life-Threatening,None,Medical Incident,56
+Potentially Life-Threatening,North Beach,Medical Incident,"2,744"
+Potentially Life-Threatening,Oceanview/Merced/Ingleside,Medical Incident,"1,793"
+Potentially Life-Threatening,Outer Mission,Medical Incident,"1,878"
+Potentially Life-Threatening,Outer Richmond,Medical Incident,"3,023"
+Potentially Life-Threatening,Pacific Heights,Medical Incident,"2,448"
+Potentially Life-Threatening,Portola,Medical Incident,"1,323"
+Potentially Life-Threatening,Potrero Hill,Medical Incident,"2,153"
+Potentially Life-Threatening,Presidio,Medical Incident,334
+Potentially Life-Threatening,Presidio Heights,Medical Incident,892
+Potentially Life-Threatening,Russian Hill,Medical Incident,"1,763"
+Potentially Life-Threatening,Seacliff,Medical Incident,152
+Potentially Life-Threatening,South of Market,Medical Incident,"19,059"
+Potentially Life-Threatening,Sunset/Parkside,Medical Incident,"4,994"
+Potentially Life-Threatening,Tenderloin,Medical Incident,"25,360"
+Potentially Life-Threatening,Treasure Island,Medical Incident,722
+Potentially Life-Threatening,Twin Peaks,Medical Incident,749
+Potentially Life-Threatening,Visitacion Valley,Medical Incident,"1,658"
+Potentially Life-Threatening,West of Twin Peaks,Medical Incident,"2,734"
+Potentially Life-Threatening,Western Addition,Medical Incident,"4,730"
+Potentially Life-Threatening,Bayview Hunters Point,Other,23
+Potentially Life-Threatening,Bernal Heights,Other,33
+Potentially Life-Threatening,Castro/Upper Market,Other,6
+Potentially Life-Threatening,Excelsior,Other,6
+Potentially Life-Threatening,Financial District/South Beach,Other,2
+Potentially Life-Threatening,Golden Gate Park,Other,9
+Potentially Life-Threatening,Haight Ashbury,Other,6
+Potentially Life-Threatening,Hayes Valley,Other,7
+Potentially Life-Threatening,Inner Richmond,Other,9
+Potentially Life-Threatening,Inner Sunset,Other,14
+Potentially Life-Threatening,Mission,Other,13
+Potentially Life-Threatening,Nob Hill,Other,15
+Potentially Life-Threatening,None,Other,9
+Potentially Life-Threatening,Outer Mission,Other,6
+Potentially Life-Threatening,Outer Richmond,Other,7
+Potentially Life-Threatening,Pacific Heights,Other,12
+Potentially Life-Threatening,Portola,Other,9
+Potentially Life-Threatening,Potrero Hill,Other,7
+Potentially Life-Threatening,South of Market,Other,16
+Potentially Life-Threatening,Sunset/Parkside,Other,19
+Potentially Life-Threatening,Tenderloin,Other,27
+Potentially Life-Threatening,Treasure Island,Other,11
+Potentially Life-Threatening,West of Twin Peaks,Other,6
+Potentially Life-Threatening,Bayview Hunters Point,Traffic Collision,639
+Potentially Life-Threatening,Bernal Heights,Traffic Collision,315
+Potentially Life-Threatening,Castro/Upper Market,Traffic Collision,161
+Potentially Life-Threatening,Chinatown,Traffic Collision,100
+Potentially Life-Threatening,Excelsior,Traffic Collision,186
+Potentially Life-Threatening,Financial District/South Beach,Traffic Collision,580
+Potentially Life-Threatening,Glen Park,Traffic Collision,35
+Potentially Life-Threatening,Golden Gate Park,Traffic Collision,181
+Potentially Life-Threatening,Haight Ashbury,Traffic Collision,98
+Potentially Life-Threatening,Hayes Valley,Traffic Collision,276
+Potentially Life-Threatening,Inner Richmond,Traffic Collision,189
+Potentially Life-Threatening,Inner Sunset,Traffic Collision,98
+Potentially Life-Threatening,Japantown,Traffic Collision,33
+Potentially Life-Threatening,Lakeshore,Traffic Collision,138
+Potentially Life-Threatening,Lincoln Park,Traffic Collision,9
+Potentially Life-Threatening,Lone Mountain/USF,Traffic Collision,80
+Potentially Life-Threatening,Marina,Traffic Collision,147
+Potentially Life-Threatening,McLaren Park,Traffic Collision,18
+Potentially Life-Threatening,Mission,Traffic Collision,904
+Potentially Life-Threatening,Mission Bay,Traffic Collision,146
+Potentially Life-Threatening,Nob Hill,Traffic Collision,231
+Potentially Life-Threatening,Noe Valley,Traffic Collision,49
+Potentially Life-Threatening,None,Traffic Collision,27
+Potentially Life-Threatening,North Beach,Traffic Collision,150
+Potentially Life-Threatening,Oceanview/Merced/Ingleside,Traffic Collision,178
+Potentially Life-Threatening,Outer Mission,Traffic Collision,264
+Potentially Life-Threatening,Outer Richmond,Traffic Collision,251
+Potentially Life-Threatening,Pacific Heights,Traffic Collision,93
+Potentially Life-Threatening,Portola,Traffic Collision,78
+Potentially Life-Threatening,Potrero Hill,Traffic Collision,178
+Potentially Life-Threatening,Presidio,Traffic Collision,46
+Potentially Life-Threatening,Presidio Heights,Traffic Collision,52
+Potentially Life-Threatening,Russian Hill,Traffic Collision,118
+Potentially Life-Threatening,Seacliff,Traffic Collision,4
+Potentially Life-Threatening,South of Market,Traffic Collision,829
+Potentially Life-Threatening,Sunset/Parkside,Traffic Collision,271
+Potentially Life-Threatening,Tenderloin,Traffic Collision,609
+Potentially Life-Threatening,Treasure Island,Traffic Collision,182
+Potentially Life-Threatening,Twin Peaks,Traffic Collision,17
+Potentially Life-Threatening,Visitacion Valley,Traffic Collision,54
+Potentially Life-Threatening,West of Twin Peaks,Traffic Collision,192
+Potentially Life-Threatening,Western Addition,Traffic Collision,241
+Potentially Life-Threatening,Marina,Water Rescue,5
+Potentially Life-Threatening,Mission Bay,Water Rescue,15
+,Mission Bay,Administrative,1
+,Pacific Heights,Administrative,2
+,Sunset/Parkside,Administrative,2
+,Tenderloin,Administrative,2
+,Nob Hill,Alarms,4
+,Bernal Heights,Confined Space / Structure Collapse,7
+,Sunset/Parkside,Confined Space / Structure Collapse,7
+,Noe Valley,Electrical Hazard,2
+,Bayview Hunters Point,Explosion,5
+,Castro/Upper Market,Fuel Spill,3
+,Hayes Valley,Fuel Spill,2
+,Bayview Hunters Point,Medical Incident,103
+,Bernal Heights,Medical Incident,46
+,Castro/Upper Market,Medical Incident,28
+,Chinatown,Medical Incident,27
+,Excelsior,Medical Incident,46
+,Financial District/South Beach,Medical Incident,57
+,Glen Park,Medical Incident,7
+,Golden Gate Park,Medical Incident,4
+,Haight Ashbury,Medical Incident,17
+,Hayes Valley,Medical Incident,37
+,Inner Richmond,Medical Incident,11
+,Inner Sunset,Medical Incident,31
+,Japantown,Medical Incident,15
+,Lakeshore,Medical Incident,23
+,Lone Mountain/USF,Medical Incident,30
+,Marina,Medical Incident,18
+,Mission,Medical Incident,102
+,Mission Bay,Medical Incident,14
+,Nob Hill,Medical Incident,70
+,Noe Valley,Medical Incident,9
+,North Beach,Medical Incident,47
+,Oceanview/Merced/Ingleside,Medical Incident,20
+,Outer Mission,Medical Incident,14
+,Outer Richmond,Medical Incident,31
+,Pacific Heights,Medical Incident,22
+,Portola,Medical Incident,24
+,Potrero Hill,Medical Incident,17
+,Presidio,Medical Incident,4
+,Presidio Heights,Medical Incident,11
+,Russian Hill,Medical Incident,12
+,Seacliff,Medical Incident,2
+,South of Market,Medical Incident,185
+,Sunset/Parkside,Medical Incident,53
+,Tenderloin,Medical Incident,334
+,Treasure Island,Medical Incident,14
+,Twin Peaks,Medical Incident,4
+,Visitacion Valley,Medical Incident,25
+,West of Twin Peaks,Medical Incident,45
+,Western Addition,Medical Incident,55
+,Bayview Hunters Point,Other,2
+,Castro/Upper Market,Other,3
+,Lakeshore,Other,1
+,Mission Bay,Other,16
+,Nob Hill,Other,1
+,Potrero Hill,Other,6
+,Presidio,Other,11
+,Bayview Hunters Point,Outside Fire,5
+,South of Market,Structure Fire,3
+,Sunset/Parkside,Suspicious Package,3
+,Bayview Hunters Point,Traffic Collision,27
+,Bernal Heights,Traffic Collision,13
+,Castro/Upper Market,Traffic Collision,2
+,Excelsior,Traffic Collision,5
+,Financial District/South Beach,Traffic Collision,9
+,Glen Park,Traffic Collision,2
+,Hayes Valley,Traffic Collision,2
+,Inner Richmond,Traffic Collision,2
+,Lakeshore,Traffic Collision,7
+,Lone Mountain/USF,Traffic Collision,2
+,Marina,Traffic Collision,2
+,Mission,Traffic Collision,20
+,Mission Bay,Traffic Collision,10
+,North Beach,Traffic Collision,3
+,Oceanview/Merced/Ingleside,Traffic Collision,10
+,Outer Richmond,Traffic Collision,8
+,Portola,Traffic Collision,2
+,Potrero Hill,Traffic Collision,10
+,Presidio,Traffic Collision,2
+,Russian Hill,Traffic Collision,11
+,South of Market,Traffic Collision,12
+,Sunset/Parkside,Traffic Collision,5
+,Tenderloin,Traffic Collision,12
+,Treasure Island,Traffic Collision,3
+,Twin Peaks,Traffic Collision,1
+,West of Twin Peaks,Traffic Collision,17
+,Western Addition,Traffic Collision,2
+,Bayview Hunters Point,Train / Rail Fire,11
+,Tenderloin,Train / Rail Fire,13
+,Hayes Valley,Vehicle Fire,2
+,Inner Sunset,Vehicle Fire,3
+,Lakeshore,Watercraft in Distress,3
+,Presidio,Watercraft in Distress,18
