@@ -1,5 +1,7 @@
 # README
 
+Website as hosted by Github Pages: https://usf-cs360-spring2020.github.io/homework4-evelynmatson/index.html
+
 <https://usf-cs360-spring2020.github.io/template-bulma/>
 
 ![Profile Image](profile.png)
