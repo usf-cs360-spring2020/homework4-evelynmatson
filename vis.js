@@ -30,23 +30,39 @@ function drawVis(data) {
 
         return toReturn;
     });
-
-    // Filter to only unique ones
-// TODO use filterUnique
-
-    let mids = new Set(data.map(function(row) {
+    let mids = data.map(function(row) {
         let toReturn = {};
-        toReturn.name = row['Call Type'];
+        toReturn.name = row['Call Type Group'] + row['Call Type'];
         toReturn.parent = row['Call Type Group'];
 
         return toReturn;
-    }));
-    console.log('mids', mids);
+    });
+    // let bottoms = data.map(function(row) {
+    //    let toReturn = {};
+    //    toReturn.name = row['Call Type Group'] + row['Call Type'] + row['Neighborhood'];
+    //    toReturn.parent = row['Call Type Group'] + row['Call Type'];
+    //
+    //    return toReturn;
+    // });
 
-    // let allNodes = data
+    // Filter to only unique ones
+    tops = filterUnique(tops, item => item.name);
+    console.log('unique tops', tops);
+
+    mids = filterUnique(mids, item => item.name);
+    console.log('unique mids', mids);
+
+    // bottoms = filterUnique(bottoms, item => item.name);
+    // console.log('uniquue bottoms', bottoms);
+
+    let allNodes = [...data, ...tops, ...mids, {name:'java', parent:''}];
+    console.log('all nodes', allNodes);
 
     let stratifiedRoot = d3.stratify()
         .id(row => row.name)
+        .parentId(row => row.parent)
+        (allNodes);
+    console.log('root', stratifiedRoot);
 
     // TODO draw something visual-ish
 }
@@ -67,28 +83,33 @@ function convertRow(row) {
 
     toReturn['Incident Count'] = row['Incident Number'];
 
-    toReturn.name = toReturn['Call Type'] + toReturn['Call Type Group'] + toReturn['Neighborhood'];
+    // Stuff for stratify
+    toReturn.parent = toReturn['Call Type Group'] + toReturn['Call Type'];
+    toReturn.name = toReturn['Call Type Group'] + toReturn['Call Type'] + toReturn['Neighborhood'];
 
     return toReturn;
 }
 
 /**
- * My own filter unique function.
- * @param item the list of things to filter
+ * My own filter unique function. Unique based on an identifier calculated using func.
+ * @param stuff the list of things to filter
  * @param function the function to use to get an identifier.
  */
-function filterUnique(item, func) {
+function filterUnique(stuff, func) {
     let seen_ids = [];
 
-    tops = tops.filter(function (item) {
-        if (! seen_ids.includes(item.name)) {
-            seen_ids.push(item.name);
+    let newStuff = stuff.filter(function (item) {
+        let funcVal = func(item);
+
+        if (! seen_ids.includes(funcVal)) {
+            seen_ids.push(funcVal);
             return true;
         } else {
             return false;
         }
     });
-    console.log('tops', tops);
+
+    return newStuff;
 }
 
 // Let's do this!
