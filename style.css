@@ -1,0 +1,161 @@
+/* Old visualization Styling */
+.prototype {
+    border-width: 2px;
+    border-color: #888888;
+    border-style: solid;
+    width: 900px;
+    height: 450px;
+    min-width: 900px;
+}
+
+.visualization {
+    border-width: 2px;
+    border-color: #888888;
+    border-style: solid;
+}
+
+
+.overall-title {
+    font-size: 1.5rem;
+}
+
+.vis-label {
+    font-size: .8rem;
+}
+
+/*Page Styling*/
+.page-content {
+    width: 900px;
+    max-width: 900px;
+}
+
+.grade-list {
+    margin-bottom: 1em;
+    margin-right: 1em;
+    /*margin-top: 10px;*/
+}
+
+.check-list {
+    list-style: none !important;
+}
+
+.hero.is-primary.is-bold {
+    background: linear-gradient(90deg, rgba(122,55,196,1) 0%, rgba(95,55,196,1) 44%, rgba(41,191,222,1) 100%) !important;
+}
+
+.content {
+    margin: auto;
+}
+
+footer.smaller-footers-are-better {
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    height:50px;
+    width: 100%;
+
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* HOMEWORK 3 STUFF */
+path.land {
+    fill : #DDDDDD;
+    stroke: none;
+}
+
+path.neighborhood {
+    fill: none;
+    stroke: white;
+    stroke-width: 3px;
+    pointer-events: none;
+}
+
+.active {
+    stroke: red !important;
+    stroke-width: 1.5px !important;
+}
+
+path.street {
+    fill: none;
+    stroke: white;
+    stroke-width: 1px;
+    pointer-events: none;
+}
+
+#tooltip {
+    font-weight: 500;
+    text-shadow: 0px 0px 2px white;
+
+    fill: black;
+    stroke: none;
+}
+
+circle.symbol {
+    stroke: white;
+    stroke-width: 0.5px;
+}
+
+/*a:link, a:visited {*/
+/*    color: #444444;*/
+/*}*/
+
+/*a:hover, a:active {*/
+/*    color: red;*/
+/*}*/
+
+th {
+    text-align: right;
+}
+
+
+/* My own homework 3 */
+/* Make the details window text not MASSIVE */
+foreignObject#details {
+    font-size: 0.85em;
+    width : auto;
+
+}
+
+/* Make the details window not take up the whole screen? */
+foreignObject#details table {
+    padding-top: 5px;
+    width: auto;
+}
+
+/* Make the details table body left side not bold */
+foreignObject#details table tbody {
+    font-weight: normal;
+}
+
+/* Make the rows in the details table more reasonable */
+foreignObject#details table tr {
+    line-height: 10px;
+}
+
+/* Make the details table border go away, and have a consistent width */
+foreignObject#details table th, foreignObject#details table td {
+    border-width: 0px !important;
+    width: 219px;
+}
+
+/* Make the legend swatches match their semi-opaque colors better */
+rect.swatch {
+    fill-opacity: 0.8;
+}
+/* Make the legend labels not bold */
+.legendCells text {
+    font-weight: normal;
+}
+
+/* Make the legend title bold */
+.legendTitle {
+    font-weight: bold;
+}
+
+/* Style the legend's white background */
+g.legendOrdinal rect#background {
+    stroke-width: 2px;
+    stroke: #222;
+    border-style: solid;
+    fill: white;
+}

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- TODO: Change title -->
-    <title>Website Template</title>
+    <title>Noise Reports Homepage</title>
+
 
     <!-- Load Bulma from CDN (consider saving it to repository instead) -->
     <!-- https://bulma.io/ -->
@@ -13,19 +13,28 @@
 
     <!-- Load Font Awesome 5 (free) icons -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <!-- include d3.js v5 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- include d3.js modules -->
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="https://d3js.org/d3-time.v1.min.js"></script>
+    <script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+
+<!--    My Css!-->
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-
   <!-- Page header -->
   <!-- https://bulma.io/documentation/layout/hero/ -->
   <section class="hero is-primary is-bold">
     <div class="hero-body">
       <div class="container">
-        <!-- TODO: Change title -->
-        <h1 class="title">Website Title</h1>
-        <!-- TODO: Change subtitle -->
-        <h2 class="subtitle">Website Subtitle</h2>
+        <h1 class="title">Noise Reports Visualization</h1>
+        <h2 class="subtitle">By Eve Matson for CS 360 'Data Visualization'</h2>
       </div>
     </div>
   </section>
@@ -33,15 +42,13 @@
 
   <!-- Page navigation -->
   <!-- https://bulma.io/documentation/components/navbar/ -->
-  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <!-- TODO: Change link to repository homepage if needed -->
-        <!-- TODO: Change which navbar-item is-active if needed -->
-        <a class="navbar-item is-active" href="index.html">
-          <span class="icon"><i class="fas fa-home"></i></span>
-          <span>Home</span>
-        </a>
+<!--        <a class="navbar-item" href="index.html">-->
+<!--          <span class="icon"><i class="fas fa-home"></i></span>-->
+<!--          <span>Home</span>-->
+<!--        </a>-->
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-menu">
           <span aria-hidden="true"></span>
@@ -53,55 +60,70 @@
       <div id="main-menu" class="navbar-menu has-text-weight-medium">
         <!-- Left navbar items -->
         <div class="navbar-start">
-          <a class="navbar-item" href="#data" title="Data">
-            <span class="icon"><i class="fas fa-table"></i></span>
-            <span>Data</span>
-          </a>
-
-          <!-- TODO: Modify or remove dropdown -->
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Visualizations
+            <a class="navbar-link"  href="index.html">
+              Info
             </a>
 
             <div class="navbar-dropdown">
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-line"></i></span>
-                <span>Line Chart</span>
+              <a class="navbar-item" href="index.html#about" title="About the Assignment">
+                <span class="icon"><i class="far fa-file-alt"></i></span>
+                <span>Assignment</span>
               </a>
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-area"></i></span>
-                <span>Area Chart</span>
+              <a class="navbar-item" href="index.html#data" title="Dataset Info">
+                <span class="icon"><i class="fas fa-table"></i></span>
+                <span>Dataset</span>
               </a>
+              <a class="navbar-item" href="index.html#wrangling" title="Dataset Info">
+                <span class="icon"><i class="fas fa-wrench"></i></span>
+                <span>Wrangling</span>
+              </a>
+              <a class="navbar-item" href="index.html#bio" title="About Me">
+                <span class="icon"><i class="fas fa-info-circle"></i></span>
+                <span>About me</span>
+              </a>
+    <!--          <a class="navbar-item is-active"  href="1.html">-->
+    <!--            <span class="icon"><i class="fas fa-chart-line"></i></span>-->
+    <!--            <span>Domestic vs. International</span>-->
+    <!--          </a>-->
+    <!--          <a class="navbar-item"  href="2.html">-->
+    <!--            <span class="icon"><i class="fas fa-chart-area"></i></span>-->
+    <!--            <span>Intl. by Region</span>-->
+    <!--          </a>-->
 
-              <hr class="navbar-divider">
+    <!--          &lt;!&ndash; <hr class="navbar-divider"> &ndash;&gt;-->
 
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-bar"></i></span>
-                <span>Bar Chart</span>
-              </a>
-              <a class="navbar-item">
+    <!--          <a class="navbar-item"  href="3.html">-->
+    <!--            <span class="icon"><i class="fas fa-chart-bar"></i></span>-->
+    <!--            <span>Terminal Growth</span>-->
+    <!--          </a>-->
+              <!-- <a class="navbar-item">
                 <span class="icon"><i class="fas fa-chart-pie"></i></span>
                 <span>Pie Chart</span>
-              </a>
+              </a> -->
             </div>
           </div>
+          <a class="navbar-item" href="vis.html" title="visualization">
+            <span class="icon"><i class="fas fa-chart-line"></i></span>
+            <span>Visualization</span>
+          </a>
+
         </div>
 
         <!-- Right navbar items -->
         <div class="navbar-end">
-          <!-- TODO: Update as needed -->
-          <a class="navbar-item" href="#about" title="About">
-            <span class="icon"><i class="fas fa-tasks"></i></span>
-            <span>Grade</span>
-          </a>
-
-          <a class="navbar-item" href="#about" title="About">
-            <span class="icon"><i class="fas fa-info-circle"></i></span>
-            <span>About</span>
-          </a>
-        </div>
+        <a class="navbar-item" href="grade.html" title="About">
+          <span class="icon"><i class="fas fa-tasks"></i></span>
+          <span>Grade</span>
+        </a>
       </div>
+      </div>
+
+  <!--      <a class="navbar-item" href="index.html#about" title="About">-->
+  <!--        <span class="icon"><i class="fas fa-info-circle"></i></span>-->
+  <!--        <span>About Me</span>-->
+  <!--      </a>-->
+
     </div>
   </nav>
   <!-- End page navigation -->
@@ -110,215 +132,115 @@
     <div class="container">
       <!-- Begin page content -->
       <div class="content">
-        <h1 class="title">
-          <!-- TODO: Change page title -->
-          Page Title
-        </h1>
-        <p class="subtitle">
-          <!-- TODO: Change page subtitle -->
-          Page Subtitle
+
+        <h2 id="about">
+          About the Assignment
+        </h2>
+        <p>This is my third homework assignment for CS 360: Data Visualization during spring semester 2020 with Sophie Engle.
+          We were given this dataset on San Francisco's 311 reports to use for some sort of geographic visualization.
+          After exploring the dataset, I decided to focus on noise complaints.
         </p>
 
-        <p>This would be an excellent place to describe what this page is for, what to find in different sections, describe any motivation or theme behind your visualizations, and so on.</p>
+        <h2 id="data">Dataset Info</h2>
+        <p>The dataset is published under the <a href="http://opendatacommons.org/licenses/pddl/1.0/">Open Data Commons Public Domain Dedication and License</a>. I accessed it on April 2nd 2020 at <a href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6">data.sfgov.org</a>, but its original source was <a href="http://www.sf311.org">http://www.sf311.org</a></p><br>
 
-        <p>You should not use this template unless you intend to customize it. Make it your own. Keep in mind this simple template is over 300 lines! You can see other examples of websites using Bulma at their showcase: <a href="https://bulma.io/expo/">bulma.io/expo/</a>.</p>
+        <div class="tile is-ancestor">
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child box">
+              <p class="title">Accessed</p>
+              <p class="subtitle">April 2, 2020</p>
+            </div>
+            <div class="tile is-child box">
+              <p class="subtitle">Columns</p>
+              <p class="title">20</p>
+            </div>
+          </div>
+          <div class="tile is-parent is-8">
+            <div class="tile is-child box">
+              <p class="title">
+                San Francisco 311 Cases</p>
+              <p>SF311 cases created since 7/1/2008 with location information.
+                This dataset includes cases generally associated with a place or thing (for example parks, streets, or buildings) and created July 1, 2008 or later. Cases generally logged by a user regarding their own needs (for example, property or business tax questions, parking permit requests) are not included
+            </div>
+          </div>
+        </div>
 
-        <h2 id="data">Data</h2>
+        <h4 class="title">
+          Relevant Columns
+        </h4>
 
-        <p>Include some detailed information about the dataset here. You should <a href="#">add a link</a> to the original dataset. You might also want to quote the license:</p>
-
-        <blockquote>
-          <p>
-            "This data is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: <a href="http://www.opendatacommons.org/licenses/pddl/1.0/">www.opendatacommons.org/licenses/pddl/1.0/</a>"
-          </p>
-          <cite>Put a citation here, possibly link to the dataset license information directly.</cite>
-        </blockquote>
-
-        <p>In addition to including a link to the source and license, you should describe the data. You might want a list of some sort to enumerate the different types of columns:</p>
-
-        <ol>
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-        </ol>
-
-        <p>This will of course differ depending on the assignment and data.</p>
-
-        <h3 id="wrangling">Wrangling</h3>
-
-        <p>Perhaps you had to do some data wrangling to the original dataset to prepare it for visualization. This would be a great place to discuss some of that wrangling.
-
-        <pre>
-You can even put code into these pre blocks.
-  It will preserve whitespace.
-    That is helpful for formatted code.
-        </pre>
-
-        <p>You can alternatively embed a Gist if you want. There is an "embed" button on <a href="https://gist.github.com/octocat/6cad326836d38bd3a7ae">the Gist page</a> and results in something like this:</p>
-
-        <script src="https://gist.github.com/octocat/6cad326836d38bd3a7ae.js"></script>
-
-        <h2 id="visualizations">Visualizations</h2>
-
-        <p>Ideally not everything would be on a single page like this example. Instead, you might want to put each section in its own webpage. You would need to carefully replicate the page template (with the header, navbar, and footer) and make the necessary updates. For example, you want the "About" navbar item to be considered active on an "About" web page.</p>
-
-        <p>For now this is just a demo. The buttons below do not go anywhere, but can be easily changed to link to different visualization pages.</p>
-
-        <p class="buttons">
-          <a class="button is-large is-success" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-line"></i>
-            </span>
-            <span>Line Chart</span>
-          </a>
-
-          <a class="button is-large is-primary" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-area"></i>
-            </span>
-            <span>Area Chart</span>
-          </a>
-
-          <a class="button is-large is-info" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-bar"></i>
-            </span>
-            <span>Bar Chart</span>
-          </a>
-
-          <a class="button is-large is-link" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-pie"></i>
-            </span>
-            <span>Pie Chart</span>
-          </a>
-        </p>
-
-        <!-- https://github.com/vega/vega-embed#basic-example -->
-        <p>It is possible to embed some visualizations directly here too. Here is <a href="https://github.com/vega/vega-embed#basic-example">an example</a> using Vega-Lite:</p>
-
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.1"></script>
-
-        <div id="vis"></div>
-
-        <script type="text/javascript">
-        var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
-        vegaEmbed('#vis', spec).then(function(result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-        </script>
-
-        <h4>Instructions</h4>
-
-        <p>You will likely need to include instructions on how to interpet and use the visualization. In the case above, if you click the three dots <i class="fas fa-ellipsis-h has-text-grey-light	"></i> above it will open a menu where you can either save the visualization to a SVG or PNG, or alternatively open it up in the online Vega Editor.</p>
-
-        <h4>Discussion</h4>
-
-        <p>You may also need other sections, like a discussion section, per-visualization section on data wrangling, and others. Because of the extra content and code visualizations take, it might be worthwhile to break up your pages into one home page and then one page per visualization.</p>
-
-        <span class="heading">Acknowledgements</span>
-
-        <p>
-          <a href="#">Link to insiration</a><br/>
-          <a href="#">Link to StackOverflow snippet</a>
-        </p>
-
-        <p class="is-6">
-          <em>Thanks to Person Name for their suggestion to do something with the visualization.</em>
-        </p>
-
-        <h2 id="grade">Grade</h2>
-
-        <!-- TODO: Remove custom style if no longer needed -->
-        <style>
-          table.grades tbody tr td:nth-child(1),
-          table.grades tbody tr td:nth-child(2) {
-            text-align: center;
-          }
-        </style>
-
-        <!-- TODO: Change or remove table -->
-        <!-- https://bulma.io/documentation/elements/table/ -->
-        <table class="table is-hoverable is-bordered grades">
+        <table class="table">
           <thead>
-            <tr>
-              <th>Letter</th>
-              <th>Done?</th>
-              <th>Description</th>
-            </tr>
+          <tr>
+            <th>Column Name</th>
+            <th>Description</th>
+          </tr>
           </thead>
-
           <tbody>
-            <tr>
-              <td>D</td>
-              <td><i class="has-text-success fas fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied. Exactly how this section should look will depend on the assignment in question. There is no requirement for formatting in this way. This is just an example of what a table element might look like for this informaiton.</td>
-            </tr>
-
-            <tr>
-              <td>C</td>
-              <td><i class="has-text-success fas fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied.</td>
-            </tr>
-
-            <tr>
-              <td>B</td>
-              <td><i class="has-text-warning far fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied.</td>
-            </tr>
-
-            <tr>
-              <td>A</td>
-              <td><i class="has-text-danger fas fa-times-circle"></i></td>
-              <td>Discussion of how this grade level was not satisfied.</td>
-            </tr>
+          <tr>
+            <td>Category</td>
+            <td>Broad type of incident.<br>
+              <span class="has-text-grey-light">Example: <em>Noise Report</em></span></td>
+          </tr>
+          <tr>
+            <td>Request Type</td>
+            <td>More specific type of incident.<br>
+              <span class="has-text-grey-light">Example: <em>construction_private_property</em></span></td>
+          </tr>
+          <tr>
+            <td>Neighborhood</td>
+            <td>Neighborhood of the city where the incident took place.<br>
+              <span class="has-text-grey-light">Example: <em>South of Market</em></span></td>
+          </tr>
+          <tr>
+            <td>Latitude</td>
+            <td>Vertical geographic position.<br>
+              <span class="has-text-grey-light">Example: <em>37.7821011</em></span></td>
+          </tr>
+          <tr>
+            <td>Longitude</td>
+            <td>Horizontal geographic position.<br>
+              <span class="has-text-grey-light">Example: <em>-122.4407522</em></span></td>
+          </tr>
           </tbody>
-
         </table>
 
-        <h2 id="about">About</h2>
+        <h2 id="wrangling">Data Wrangling</h2>
+        <p>I filtered the dataset when downloading it from data.sfgov.org, and kept only cases of category "Noise Report", and which were opened in February 2020. <a href="resources/311_Cases_filtered_feb_noise.csv">[Data file as downloaded]</a>.
+        Then I loaded the data into D3, and created the visualization. I created a JavaScript object to map reports to their neighborhood, to make hover data-on-demand more efficient, but that was about it.</p>
+
+        <h2 id="bio">About me</h2><br>
 
         <!-- Profile box -->
         <!-- https://bulma.io/documentation/layout/media-object/ -->
         <article class="media">
-          <!-- TODO: Replace with profile photo -->
           <figure class="media-left">
-            <p class="image is-128x128"><img class="is-rounded" src="profile.png"></p>
+            <p class="image is-128x128"><img class="is-rounded" src="resources/profile.jpg"></p>
           </figure>
 
           <div class="media-content">
             <div class="content">
-              <!-- TODO: Replace with contact information -->
               <p>
-                <strong>Full Name</strong><br/>
-                CS Major, <a href="https://www.usfca.edu/">University of San Francisco</a><br/>
-                <em>Expected Graduation: 20??</em><br/>
-                <i class="fas fa-envelope"></i> <a href="mailto:username@dons.usfca.edu">username@dons.usfca.edu</a>
+                <strong>Eve Matson</strong><br/>
+                Computer Science Major, <a href="https://www.usfca.edu/">University of San Francisco</a><br/>
+                <em>Expected Graduation: 2021</em><br/>
+                <i class="fas fa-envelope" style="margin-right: 3px"></i> <a href="mailto:ematson@dons.usfca.edu">ematson@dons.usfca.edu</a>
+                   <i class="fab fa-github" style="margin-left: 10px; margin-right: 3px"></i> <a href="https://github.com/evelynmatson">evelynmatson</a>
               </p>
 
-              <!-- TODO: Replace with brief biography -->
               <p>
-                Here is a brief bio about yourself. A good rule of thumb is to include at least one technical tidbit (favorite area or course within computer science), and one fun tidbit (such as loving dogs).
+                I am a junior Computer Science Major at USF, and expect to graduate in May 2021. I'm from Seattle and enjoy doing computer science, physics and theatre!
               </p>
 
-              <!-- TODO: Replace or remove tags -->
-              <!-- https://bulma.io/documentation/elements/tag/ -->
               <div class="heading">Skills</div>
 
               <div class="tags">
+                <span class="tag">Java</span>
                 <span class="tag">Python</span>
                 <span class="tag">C</span>
-                <span class="tag">Java</span>
                 <span class="tag">JavaScript</span>
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
-                <span class="tag">SVG</span>
               </div>
             </div>
           </div>
@@ -326,27 +248,17 @@ You can even put code into these pre blocks.
         <!-- End profile box -->
 
       </div>
-      <!-- End page content -->
     </div>
+    <!-- End page content -->
   </section>
+<!--  </main>-->
 
   <!-- Page footer -->
+<!--  <div class="false-footer"></div>-->
   <!-- https://bulma.io/documentation/layout/footer/ -->
-  <footer class="footer">
+  <footer class="footer smaller-footers-are-better">
     <div class="content has-text-centered is-size-7">
       <p>
-        <a href="#top">
-          <span class="fas fa-arrow-up"></span>
-          <span class="has-text-weight-medium">Back to Top</span>
-        </a>
-      </p>
-
-      <p>
-        <!-- TODO: Change to link to your Github repository -->
-        <a href="https://github.com/usf-cs360-spring2020/template-bulma" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
-          <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
-        </a>
-
         <a href="https://fontawesome.com/" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
           <i class="fab fa-font-awesome"></i>&nbsp;<strong>FontAwesome</strong>
         </a>
@@ -378,6 +290,8 @@ You can even put code into these pre blocks.
   });
   </script>
   <!-- End mobile menu responsiveness -->
+
+
   </body>
 
 </html>

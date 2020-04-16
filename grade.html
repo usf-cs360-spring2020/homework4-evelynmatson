@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Noise Reports Grade</title>
+
+    <!-- Load Bulma from CDN (consider saving it to repository instead) -->
+    <!-- https://bulma.io/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+    <!-- Load Font Awesome 5 (free) icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <!-- include d3.js v5 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- include d3.js modules -->
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="https://d3js.org/d3-time.v1.min.js"></script>
+    <script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+
+
+    <!--    My CSS-->
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+
+  <!-- Page header -->
+  <!-- https://bulma.io/documentation/layout/hero/ -->
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Noise Reports Visualization</h1>
+        <h2 class="subtitle">By Eve Matson for CS 360 'Data Visualization'</h2>
+      </div>
+    </div>
+  </section>
+  <!-- End page header -->
+
+  <!-- Page navigation -->
+  <!-- https://bulma.io/documentation/components/navbar/ -->
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="main-menu" class="navbar-menu has-text-weight-medium">
+        <!-- Left navbar items -->
+        <div class="navbar-start">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"  href="index.html">
+              Info
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="index.html#about" title="About the Assignment">
+                <span class="icon"><i class="far fa-file-alt"></i></span>
+                <span>Assignment</span>
+              </a>
+              <a class="navbar-item" href="index.html#data" title="Dataset Info">
+                <span class="icon"><i class="fas fa-table"></i></span>
+                <span>Dataset</span>
+              </a>
+              <a class="navbar-item" href="index.html#wrangling" title="Dataset Info">
+                <span class="icon"><i class="fas fa-wrench"></i></span>
+                <span>Wrangling</span>
+              </a>
+              <a class="navbar-item" href="index.html#bio" title="About Me">
+                <span class="icon"><i class="fas fa-info-circle"></i></span>
+                <span>About me</span>
+              </a>
+            </div>
+          </div>
+          <a class="navbar-item" href="vis.html" title="visualization">
+            <span class="icon"><i class="fas fa-chart-line"></i></span>
+            <span>Visualization</span>
+          </a>
+        </div>
+
+        <!-- Right navbar items -->
+        <div class="navbar-end">
+          <a class="navbar-item" href="grade.html" title="About">
+            <span class="icon"><i class="fas fa-tasks"></i></span>
+            <span>Grade</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End page navigation -->
+
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h1 class="title">
+          Grade
+        </h1>
+        <p>
+          I have attempted to earn an A level grade, and am confident that I have satisfied all the requirements needed for that grade level.
+        </p>
+
+        <style>
+          table.grades tbody tr td:nth-child(1),
+          table.grades tbody tr td:nth-child(2) {
+            text-align: center;
+          }
+        </style>
+
+        <!-- https://bulma.io/documentation/elements/table/ -->
+        <table class="table is-hoverable is-bordered grades">
+          <thead>
+            <tr>
+              <th>Letter</th>
+              <th>Done?</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>D-Level Functionality</td>
+              <td><i class="has-text-success fas fa-check-circle"></i></td>
+              <td>
+                <ul class="fa-ul check-list grade-list">
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Visualize the dataset (see §1.1 for details) on a projected base map (see §1.2 for details) using one of the following visualization techniques: (non-proportianal symbol map)<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... show the location of every individual request made.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... encode an additional piece of categorical information using color.<br></li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>C-Level Functionality</td>
+              <td><i class="has-text-success fas fa-check-circle"></i></td>
+              <td>
+                <ul class="fa-ul check-list grade-list">
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Complete the D level functionality using D3 version 5.<br></li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>B-Level Functionality</td>
+              <td><i class="has-text-success fas fa-check-circle"></i></td>
+              <td>
+                <ul class="fa-ul check-list grade-list">
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Complete the C level functionality and implement details-on-demand interactivity.<br></li>
+                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... show details when the mouse hovers over a region<br></li>
+                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... implement this in base D3 ...<br></li>
+                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... details should be readable and informative. <br></li><br>
+                  <!--                  <li style="color: #888888"><em><span class="fa-li"><i class="fas fa-info-circle"></i></span>As I posted about on Piazza, Sophie gave me permission to move on to D3 after doing basic RawGraphs prototyping, since it was unable to prototype my whole visualization concept.<br></em></li>-->
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>A-Level Functionality</td>
+                <td><i class="has-text-success fas fa-check-circle"></i></td>
+              <td>
+                <ul class="fa-ul check-list grade-list">
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Complete the B level functionality and implement one of the following: (Filtering)<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Allow users to filter the data<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... add a linked legend to control what data is brushed/filtered<br></li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>General Writeups</td>
+              <td><i class="has-text-success fas fa-check-circle"></i></td>
+              <td>
+                <ul class="check-list fa-ul grade-list">
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Dataset: Include information about the original dataset, including its source, size, license, when you accessed it, and any filtering or processing you performed to visualize that data.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Attempted Grade: Include your self-assessment of the letter grade you should earn (D, C, B, or A). Clearly indicate how your submission meets the functionality requirements.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Author Information: Include your professional information, including your name, photo, USF email address, major, expected graduation date, and brief bio about yourself.<br></li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Visualization Writeup</td>
+              <td><i class="has-text-success fas fa-check-circle"></i></td>
+              <td>
+                <ul class="check-list fa-ul grade-list">
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Encoding: Include how to interpret your visualization, indicating exactly how data is encoded.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Interactivity: Include how to interact with your visualization.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Wrangling: Include any per-visualization data wrangling you performed on the original dataset, including filtering and processing, and how you wrangled the data. Link to the wrangled data in your repository when possible.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Conclusion: Include one conclusion you can make about the data using your visualization. The conclusion should ideally be something that a simple statistic could not replicate.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Attribution: Include any inspirations that helped you create this visualization, any additional datasets you used, and any code that you referenced.<br></li>
+                </ul>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <!-- End page content -->
+    </div>
+  </section>
+
+  <!-- Page footer -->
+  <!-- https://bulma.io/documentation/layout/footer/ -->
+  <footer class="footer smaller-footers-are-better">
+    <div class="content has-text-centered is-size-7">
+      <p>
+        <a href="https://github.com/usf-cs360-spring2020/template-bulma" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+          <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
+        </a>
+
+        <a href="https://fontawesome.com/" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+          <i class="fab fa-font-awesome"></i>&nbsp;<strong>FontAwesome</strong>
+        </a>
+
+        <a href="https://bulma.io" class="button is-small">
+          <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+        </a>
+      </p>
+    </div>
+  </footer>
+  <!-- End page footer -->
+
+  <!-- Mobile menu responsiveness -->
+  <!-- https://bulma.io/documentation/components/navbar/ -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    if ($navbarBurgers.length > 0) {
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    }
+  });
+  </script>
+  <!-- End mobile menu responsiveness -->
+  </body>
+
+</html>

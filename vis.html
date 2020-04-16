@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Noise Reports Visualization</title>
+
+    <!-- Load Bulma from CDN (consider saving it to repository instead) -->
+    <!-- https://bulma.io/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+    <!-- Load Font Awesome 5 (free) icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <!-- Load d3 -->
+    <!-- include d3.js v5 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- include d3.js modules -->
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="https://d3js.org/d3-time.v1.min.js"></script>
+    <script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+    <script src="https://d3js.org/d3-selection.v1.min.js"></script>
+    <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-format.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale.v2.min.js"></script>
+    <script src="https://d3js.org/d3-axis.v1.min.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+    <script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+    <script src="https://d3js.org/d3-ease.v1.min.js"></script>
+    <script src="https://d3js.org/d3-timer.v1.min.js"></script>
+    <script src="https://d3js.org/d3-transition.v1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js" integrity="sha256-qo76Vs9B6JAALbrTn+PcN1r09hbNLd2M78V19glOMeU=" crossorigin="anonymous"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+
+  <!-- Page header -->
+  <!-- https://bulma.io/documentation/layout/hero/ -->
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Noise Reports Visualization</h1>
+        <h2 class="subtitle">By Eve Matson for CS 360 'Data Visualization'</h2>
+      </div>
+    </div>
+  </section>
+  <!-- End page header -->
+
+  <!-- Page navigation -->
+  <!-- https://bulma.io/documentation/components/navbar/ -->
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <!--        <a class="navbar-item" href="index.html">-->
+        <!--          <span class="icon"><i class="fas fa-home"></i></span>-->
+        <!--          <span>Home</span>-->
+        <!--        </a>-->
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="main-menu" class="navbar-menu has-text-weight-medium">
+        <!-- Left navbar items -->
+        <div class="navbar-start">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"  href="index.html">
+              Info
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="index.html#about" title="About the Assignment">
+                <span class="icon"><i class="far fa-file-alt"></i></span>
+                <span>Assignment</span>
+              </a>
+              <a class="navbar-item" href="index.html#data" title="Dataset Info">
+                <span class="icon"><i class="fas fa-table"></i></span>
+                <span>Dataset</span>
+              </a>
+              <a class="navbar-item" href="index.html#wrangling" title="Dataset Info">
+                <span class="icon"><i class="fas fa-wrench"></i></span>
+                <span>Wrangling</span>
+              </a>
+              <a class="navbar-item" href="index.html#bio" title="About Me">
+                <span class="icon"><i class="fas fa-info-circle"></i></span>
+                <span>About me</span>
+              </a>
+              <!--          <a class="navbar-item is-active"  href="1.html">-->
+              <!--            <span class="icon"><i class="fas fa-chart-line"></i></span>-->
+              <!--            <span>Domestic vs. International</span>-->
+              <!--          </a>-->
+              <!--          <a class="navbar-item"  href="2.html">-->
+              <!--            <span class="icon"><i class="fas fa-chart-area"></i></span>-->
+              <!--            <span>Intl. by Region</span>-->
+              <!--          </a>-->
+
+              <!--          &lt;!&ndash; <hr class="navbar-divider"> &ndash;&gt;-->
+
+              <!--          <a class="navbar-item"  href="3.html">-->
+              <!--            <span class="icon"><i class="fas fa-chart-bar"></i></span>-->
+              <!--            <span>Terminal Growth</span>-->
+              <!--          </a>-->
+              <!-- <a class="navbar-item">
+                <span class="icon"><i class="fas fa-chart-pie"></i></span>
+                <span>Pie Chart</span>
+              </a> -->
+            </div>
+          </div>
+          <a class="navbar-item" href="vis.html" title="visualization">
+            <span class="icon"><i class="fas fa-chart-line"></i></span>
+            <span>Visualization</span>
+          </a>
+
+        </div>
+
+        <!-- Right navbar items -->
+        <div class="navbar-end">
+          <a class="navbar-item" href="grade.html" title="About">
+            <span class="icon"><i class="fas fa-tasks"></i></span>
+            <span>Grade</span>
+          </a>
+        </div>
+      </div>
+
+      <!--      <a class="navbar-item" href="index.html#about" title="About">-->
+      <!--        <span class="icon"><i class="fas fa-info-circle"></i></span>-->
+      <!--        <span>About Me</span>-->
+      <!--      </a>-->
+
+    </div>
+  </nav>
+  <!-- End page navigation -->
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Begin page content -->
+      <div class="content page-content">
+        <h1 class="title">
+          Noise Reports in San Francisco
+        </h1>
+        <p class="subtitle">
+          Reported in February 2020, separated by category.
+        </p>
+
+<!--        Hardcoded SVG where d3 will make the visualization-->
+        <svg id="vis_svg" class="visualization" height="600" width="960">
+          <g id="background_water">
+            <rect id="water" width="960" height="600" fill="#add8e6"></rect>
+          </g>
+          <g id="basemap"></g>
+
+          <g id="streets" pointer-events="none"></g>
+          <g id="outline" pointer-events="none"></g>
+
+          <g id="noisedots" pointer-events="none"></g>
+          <g id="tooltip" pointer-events="none"></g>
+          <g id="details" pointer-events="none"></g>
+
+          <g id="legend">
+            <rect id="background"></rect>
+          </g>
+        </svg>
+        <script src="vis.js"></script>
+
+        <h3>About</h3>
+        <p>This is a non-proportional symbol map geographic visualization, displayed using a conic equal area projection.
+        I have grouped the different types of reports into four broad categories, which then is encoded by color (see legend).
+        I have also added outlines of the different neighborhoods in San Francisco, as defined by the Mayor's Office.
+        This enables comparison between neighborhoods, and makes finding reports near specific parts of the city easier.</p>
+        <p>Each dot represents a single noise report, placed onto the map by its geographic location.
+          Each dot is partially transparent, enabling multiple reports in the same location to appear more pronounced than singular ones.</p>
+        <ul>
+          <li><strong>Color of Dot</strong> - Broad category of the report. See legend.</li>
+          <li><strong>Location of Dot on Map</strong> - Location of the report.</li>
+        </ul>
+
+        <h3>Interactivity</h3>
+        <p>I have enabled both details-on-demand interactivity and filtering interactivity.</p>
+        <p>When <strong>hovering over different neighborhoods</strong> on the map, a details pane will appear which lists the number of incidents from different categories that happened in that neighborhood.
+        The neighborhood will also be highlighted in red, making its boundaries clearer.</p>
+        <p>By <strong>clicking on the colored swatches in the legend</strong>, you can toggle each category of report to filter the data to only show the types you are interested in.</p>
+
+        <h3>Conclusions</h3>
+        <p>The visualization makes it clear that more noise reports happen near the downtown region of the city, and fewer happen in the west and south parts of the city.
+        It also suggests that each type are about equally distributed throughout the city, which surprised me a little.</p>
+
+        <h3>Acknowledgements</h3>
+        <p>Thank you to the following people for making the following helpful resources:</p>
+        <ul>
+          <li>Sophie Engle for her <a href="https://bl.ocks.org/sjengle/2f6d4832397e3cdd78d735774cb5a4f2">bl.ocks.org map visualization example</a></li>
+          <li>Higo Wiledal for his <a href="https://medium.com/your-majesty-co/frameworkless-javascript-template-literals-the-best-thing-since-sliced-bread-d97f000ce955">article about the magic of JavaScript template literals</a></li>
+          <li>d3noob for their bl.ocks.org <a href="https://bl.ocks.org/d3noob/5d621a60e2d1d02086bf">block about hiding d3 elements with click events</a></li>
+        </ul>
+        <p>Thank you data.sfgov.org for the following datasets that I also used:</p>
+        <ul>
+          <li><a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/SF-Find-Neighborhoods/pty2-tcw4">SF Find Neighborhoods</a></li>
+        </ul>
+      </div>
+      <!-- End page content -->
+    </div>
+  </section>
+
+  <!-- Page footer -->
+<!--  <div class="false-footer"></div>-->
+  <!-- https://bulma.io/documentation/layout/footer/ -->
+  <footer class="footer smaller-footers-are-better">
+    <div class="content has-text-centered is-size-7">
+      <p>
+        <a href="https://github.com/usf-cs360-spring2020/template-bulma" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+          <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
+        </a>
+
+        <a href="https://fontawesome.com/" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+          <i class="fab fa-font-awesome"></i>&nbsp;<strong>FontAwesome</strong>
+        </a>
+
+        <a href="https://bulma.io" class="button is-small">
+          <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+        </a>
+      </p>
+    </div>
+  </footer>
+  <!-- End page footer -->
+
+  <!-- Mobile menu responsiveness -->
+  <!-- https://bulma.io/documentation/components/navbar/ -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    if ($navbarBurgers.length > 0) {
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    }
+  });
+  </script>
+  <!-- End mobile menu responsiveness -->
+  </body>
+
+</html>
