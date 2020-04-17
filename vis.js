@@ -26,7 +26,7 @@ function drawVis(data) {
     let tops = data.map(function(row) {
         let toReturn = {};
         toReturn.name = row['Call Type Group'];
-        toReturn.parent = 'java';
+        toReturn.parent = 'top';
 
         return toReturn;
     });
@@ -55,7 +55,8 @@ function drawVis(data) {
     // bottoms = filterUnique(bottoms, item => item.name);
     // console.log('uniquue bottoms', bottoms);
 
-    let allNodes = [...data, ...tops, ...mids, {name:'java', parent:''}];
+    let allNodes = [...data, ...tops, ...mids, {name:'top', parent:''}];
+    // let allNodes = [...tops, ...mids, {name:'top', parent:''}];
     console.log('all nodes', allNodes);
 
     let stratifiedRoot = d3.stratify()
@@ -80,6 +81,12 @@ function convertRow(row) {
 
     // TODO Remove apostrophes?
     // toReturn['Neighborhood'] = row['Neighborhooods - Analysis Boundaries'].replace(/'/g, '');
+
+    // Prevent call type group being ''
+    if (toReturn['Call Type Group'] == '') {
+        toReturn['Call Type Group'] = 'other';
+    }
+
 
     toReturn['Incident Count'] = row['Incident Number'];
 
