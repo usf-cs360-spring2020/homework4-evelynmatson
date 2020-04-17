@@ -28,12 +28,16 @@ function drawVis(data) {
         toReturn.name = row['Call Type Group'];
         toReturn.parent = 'top';
 
+        toReturn['Incident Count'] = 0;
+
         return toReturn;
     });
     let mids = data.map(function(row) {
         let toReturn = {};
         toReturn.name = row['Call Type Group'] + row['Call Type'];
         toReturn.parent = row['Call Type Group'];
+
+        toReturn['Incident Count'] = 0;
 
         return toReturn;
     });
@@ -59,11 +63,19 @@ function drawVis(data) {
     // let allNodes = [...tops, ...mids, {name:'top', parent:''}];
     console.log('all nodes', allNodes);
 
+    // Make the hierarchy
     let stratifiedRoot = d3.stratify()
         .id(row => row.name)
         .parentId(row => row.parent)
         (allNodes);
     console.log('root', stratifiedRoot);
+
+    // Calculate some values
+    stratifiedRoot.sum(row => row['Incident Count']);
+    stratifiedRoot.each(function(node) {
+        node.totalCount = node.value;
+    });
+    console.log('root with calculations', stratifiedRoot);
 
     // TODO draw something visual-ish
 }
