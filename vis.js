@@ -1,5 +1,6 @@
 let svg;
 let colorScale;
+let numberFormat;
 
 /**
  * Prepare things, load the data, then draw the visualization
@@ -9,6 +10,7 @@ function prepVis() {
 
     // TODO prepare things, set up
     svg = d3.select('svg#vis_svg');
+    numberFormat = d3.format(".2~s");
 
 
 
@@ -92,9 +94,9 @@ function drawVis(data) {
 
     module.each(function(node) {
         node.theta = node.x;
-        node.r = node.y;
+        node.radial = node.y;
 
-        let point = toCartesian(node.r, node.theta);
+        let point = toCartesian(node.radial, node.theta);
         node.x = point.x;
         node.y = point.y;
     });
@@ -138,6 +140,10 @@ function convertRow(row) {
     return toReturn;
 }
 
+
+
+
+
 // MY HELPERS
 /**
  * My own filter unique function. Unique based on an identifier calculated using func.
@@ -162,13 +168,14 @@ function filterUnique(stuff, func) {
 }
 
 
-// SOPHIE'S HELPERS
 
+
+// SOPHIE'S HELPERS
 // Sophie's straight line generator
 let straightlinehelper = d3.line()
         .curve(d3.curveLinear)
-        .x(d => d.x)
-        .y(d => d.y);
+        .x(d => d['x'])
+        .y(d => d['y']);
 let straightLine = function(node) {
     return straightlinehelper([node.source, node.target]);
 };
