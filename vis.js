@@ -2,6 +2,52 @@ let svg;
 let colorScale;
 let numberFormat;
 let straightLine;
+let areas = {
+    "Bayview Hunters Point": 3.2995929824653775e-7,
+    "Bernal Heights": 6.875398811363375e-8,
+    "Castro/Upper Market": 5.467377810271634e-8,
+    "Chinatown": 1.4328101706653532e-8,
+    "Excelsior": 8.879836159873052e-8,
+    "Financial District/South Beach": 7.16735986762e-8,
+    "Glen Park": 4.263538327607805e-8,
+    "Inner Richmond": 4.74582944562078e-8,
+    "Golden Gate Park": 1.0999858631581153e-7,
+    "Haight Ashbury": 3.551011586744631e-8,
+    "Hayes Valley": 3.1278719462983985e-8,
+    "Inner Sunset": 9.080600839652135e-8,
+    "Japantown": 7.69778443906668e-9,
+    "McLaren Park": 3.927075589055826e-8,
+    "Tenderloin": 2.505432950059881e-8,
+    "Lakeshore": 1.8374105323758786e-7,
+    "Lincoln Park": 2.517847096353071e-8,
+    "Lone Mountain/USF": 3.694715924357162e-8,
+    "Marina": 6.526350472791586e-8,
+    "Russian Hill": 3.150833559427748e-8,
+    "Mission": 1.201409076538265e-7,
+    "Mission Bay": 5.185902532631335e-8,
+    "Nob Hill": 2.5949314394737673e-8,
+    "Seacliff": 1.3580112025879003e-8,
+    "Noe Valley": 6.226161455047963e-8,
+    "North Beach": 3.184709888250734e-8,
+    "Oceanview/Merced/Ingleside": 6.71831061251291e-8,
+    "South of Market": 5.644669178207152e-8,
+    "Sunset/Parkside": 2.697054607256303e-7,
+    "Outer Mission": 6.40490584446199e-8,
+    "Outer Richmond": 1.1421838101575966e-7,
+    "Pacific Heights": 5.072141065513779e-8,
+    "Portola": 5.266964060618371e-8,
+    "Potrero Hill": 7.253899004267683e-8,
+    "Presidio": 1.507806890640558e-7,
+    "Presidio Heights": 3.203887214813108e-8,
+    "Treasure Island": 5.669422061628886e-8,
+    "Twin Peaks": 4.22664974295642e-8,
+    "Visitacion Valley": 3.902341416904362e-8,
+    "West of Twin Peaks": 1.9507723566688656e-7,
+    "Western Addition": 3.721143938964292e-8
+};
+// Calculated using d3.geoArea and resources/Analysis Neighborhoods.geojson
+
+
 
 /**
  * Prepare things, load the data, then draw the visualization
@@ -120,6 +166,7 @@ function convertRow(row) {
     toReturn['Call Type Group'] = row['Call Type Group'];
     toReturn['Call Type'] = row['Call Type'];
     toReturn['Neighborhood'] = row['Neighborhooods - Analysis Boundaries'];
+    toReturn['Area'] = areas[toReturn['Neighborhood']];
 
     // TODO Remove apostrophes?
     // toReturn['Neighborhood'] = row['Neighborhooods - Analysis Boundaries'].replace(/'/g, '');
