@@ -1,6 +1,7 @@
 let svg;
 let colorScale;
 let numberFormat;
+let straightLine;
 
 /**
  * Prepare things, load the data, then draw the visualization
@@ -11,6 +12,15 @@ function prepVis() {
     // TODO prepare things, set up
     svg = d3.select('svg#vis_svg');
     numberFormat = d3.format(".2~s");
+
+    // Sophie's straight line generator
+    let straightlinehelper = d3.line()
+        .curve(d3.curveLinear)
+        .x(d => d['x'])
+        .y(d => d['y']);
+    straightLine = function(node) {
+        return straightlinehelper([node.source, node.target]);
+    };
 
 
 
@@ -47,13 +57,6 @@ function drawVis(data) {
 
         return toReturn;
     });
-    // let bottoms = data.map(function(row) {
-    //    let toReturn = {};
-    //    toReturn.name = row['Call Type Group'] + row['Call Type'] + row['Neighborhood'];
-    //    toReturn.parent = row['Call Type Group'] + row['Call Type'];
-    //
-    //    return toReturn;
-    // });
 
     // Filter to only unique ones
     tops = filterUnique(tops, item => item.name);
@@ -62,11 +65,7 @@ function drawVis(data) {
     mids = filterUnique(mids, item => item.name);
     console.log('unique mids', mids);
 
-    // bottoms = filterUnique(bottoms, item => item.name);
-    // console.log('uniquue bottoms', bottoms);
-
     let allNodes = [...data, ...tops, ...mids, {name:'top', parent:''}];
-    // let allNodes = [...tops, ...mids, {name:'top', parent:''}];
     console.log('all nodes', allNodes);
 
     // Make the hierarchy
@@ -76,10 +75,10 @@ function drawVis(data) {
         (allNodes);
     console.log('root', stratifiedRoot);
 
-    // Calculate some values
+    // Calculate some values (total counts)
     stratifiedRoot.sum(row => row['Incident Count']);
     stratifiedRoot.each(function(node) {
-        node.totalCount = node.value;
+        node.data.totalCount = node.value;
     });
     console.log('root with calculations', stratifiedRoot);
 
@@ -141,9 +140,6 @@ function convertRow(row) {
 }
 
 
-
-
-
 // MY HELPERS
 /**
  * My own filter unique function. Unique based on an identifier calculated using func.
@@ -168,18 +164,7 @@ function filterUnique(stuff, func) {
 }
 
 
-
-
 // SOPHIE'S HELPERS
-// Sophie's straight line generator
-let straightlinehelper = d3.line()
-        .curve(d3.curveLinear)
-        .x(d => d['x'])
-        .y(d => d['y']);
-let straightLine = function(node) {
-    return straightlinehelper([node.source, node.target]);
-};
-
 /**
  * Sophie's helpful translate method.
  * @param x horizontal amount to translate
@@ -287,6 +272,8 @@ function setupEvents(g, selection, raise) {
  * @param node the node to show the tooltip about
  */
 function showTooltip(g, node) {
+    console.log('showing tooltip for node, datum', node, node.datum());
+
     let gbox = g.node().getBBox();     // get bounding box of group BEFORE adding text
     let nbox = node.node().getBBox();  // get bounding box of node
 
@@ -302,10 +289,10 @@ function showTooltip(g, node) {
     let datum = node.datum();
 
     // remove "java.base." from the node name
-    let name = datum.data.name.replace("java\.base\.", "");
+    let name = datum.data.name;  //.replace("java\.base\.", "");
 
     // use node name and total size as tooltip text
-    let text = `${name} (${numberFormat(datum.data.total)}, ${numberFormat(datum.data.leaves)}n)`;
+    let text = `${name} (${numberFormat(datum.data.totalCount)} total incidents)`;
 
     // create tooltip
     let tooltip = g.append('text')
