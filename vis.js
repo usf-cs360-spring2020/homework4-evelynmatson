@@ -50,7 +50,7 @@ function drawVis(data) {
     });
     let mids = data.map(function(row) {
         let toReturn = {};
-        toReturn.name = row['Call Type Group'] + row['Call Type'];
+        toReturn.name = row['Call Type Group'] + ':' + row['Call Type'];
         toReturn.parent = row['Call Type Group'];
 
         toReturn['Incident Count'] = 0;
@@ -133,8 +133,8 @@ function convertRow(row) {
     toReturn['Incident Count'] = row['Incident Number'];
 
     // Stuff for stratify
-    toReturn.parent = toReturn['Call Type Group'] + toReturn['Call Type'];
-    toReturn.name = toReturn['Call Type Group'] + toReturn['Call Type'] + toReturn['Neighborhood'];
+    toReturn.parent = toReturn['Call Type Group'] + ':' + toReturn['Call Type'];
+    toReturn.name = toReturn['Call Type Group'] + ':' + toReturn['Call Type'] + ' - ' + toReturn['Neighborhood'];
 
     return toReturn;
 }
