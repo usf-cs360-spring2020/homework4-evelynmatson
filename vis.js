@@ -42,7 +42,7 @@ function drawVis(data) {
     let tops = data.map(function(row) {
         let toReturn = {};
         toReturn.name = row['Call Type Group'];
-        toReturn.parent = 'top';
+        toReturn.parent = 'All Incidents';
 
         toReturn['Incident Count'] = 0;
 
@@ -65,7 +65,7 @@ function drawVis(data) {
     mids = filterUnique(mids, item => item.name);
     console.log('unique mids', mids);
 
-    let allNodes = [...data, ...tops, ...mids, {name:'top', parent:''}];
+    let allNodes = [...data, ...tops, ...mids, {name:'All Incidents', parent:''}];
     console.log('all nodes', allNodes);
 
     // Make the hierarchy
