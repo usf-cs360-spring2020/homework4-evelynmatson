@@ -2,6 +2,7 @@ let svg;
 let colorScale;
 let numberFormat;
 let straightLine;
+let current_node_name;
 let areas = {
     "Bayview Hunters Point": 3.2995929824653775e-7,
     "Bernal Heights": 6.875398811363375e-8,
@@ -68,7 +69,8 @@ function prepVis() {
         return straightlinehelper([node.source, node.target]);
     };
 
-
+    // Start visualizing all nodes to begin with
+    current_node_name = 'All Incidents';
 
     // Load the data, then draw the visualization!
     let csv = d3.csv('resources/Fire_Department_Calls_for_Service.csv', convertRow)
@@ -82,7 +84,7 @@ function prepVis() {
 function drawVis(data) {
 
     // Make a hierarchy out of the data
-    console.log('plain data', data);
+    // console.log('plain data', data);
 
     // Add extra mid-level nodes
     let tops = data.map(function(row) {
@@ -106,10 +108,10 @@ function drawVis(data) {
 
     // Filter to only unique ones
     tops = filterUnique(tops, item => item.name);
-    console.log('unique tops', tops);
+    // console.log('unique tops', tops);
 
     mids = filterUnique(mids, item => item.name);
-    console.log('unique mids', mids);
+    // console.log('unique mids', mids);
 
     let allNodes = [...data, ...tops, ...mids, {name:'All Incidents', parent:''}];
     console.log('all nodes', allNodes);
@@ -312,6 +314,16 @@ function setupEvents(g, selection, raise) {
     selection.on('mouseout.tooltip', function(d) {
         g.select("#tooltip").remove();
     });
+
+    selection.on('click.zoom', function(d) {
+        let this_node_maybe = d3.select(this).datum().data;
+        current_node_name = this_node_maybe.name;
+        console.log('set current_node_name to', current_node_name);
+
+        drawVis();
+    })
+
+    // TODO allow zoom out with click on root
 }
 
 /**
@@ -320,7 +332,7 @@ function setupEvents(g, selection, raise) {
  * @param node the node to show the tooltip about
  */
 function showTooltip(g, node) {
-    console.log('showing tooltip for node, datum', node, node.datum());
+    // console.log('showing tooltip for node, datum', node, node.datum());
 
     let gbox = g.node().getBBox();     // get bounding box of group BEFORE adding text
     let nbox = node.node().getBBox();  // get bounding box of node
