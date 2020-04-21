@@ -132,10 +132,18 @@ function drawVis(data) {
     });
     console.log('root with calculations', stratifiedRoot);
 
-    //  Actually draw something
-    colorScale = d3.scaleSequential([stratifiedRoot.height, 0], d3.interpolateViridis);
+    // Find the selected node to draw
+    let selectedRoot;
+    stratifiedRoot.each(function(node) {
+        if (node.data.name == current_node_name) {
+            selectedRoot = node;
+        }
+    });
 
-    let module = stratifiedRoot.copy();
+    //  Actually draw something
+    colorScale = d3.scaleSequential([selectedRoot.height, 0], d3.interpolateViridis);
+
+    let module = selectedRoot.copy();
     let pad = 0;
     let diam = 550;
     let layout = d3.tree().size([2*Math.PI, (diam/2) - pad]);
