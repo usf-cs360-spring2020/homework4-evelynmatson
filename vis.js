@@ -133,7 +133,7 @@ function drawVis(data) {
 
     let module = stratifiedRoot.copy();
     let pad = 0;
-    let diam = 400;
+    let diam = 550;
     let layout = d3.tree().size([2*Math.PI, (diam/2) - pad]);
     layout(module);
 
@@ -146,8 +146,8 @@ function drawVis(data) {
         node.y = point.y;
     });
 
-    let width = 400;
-    let height = 400;
+    let width = 900;
+    let height = 600;
     let plot = svg.append('g')
         .attr('id', 'plot1')
         .attr('transform', translate(width / 2, height / 2));
@@ -242,6 +242,7 @@ function toCartesian(r, theta) {
  * @param generator the generator to use
  */
 function drawLinks(g, links, generator) {
+    console.log('drawing links now...');
     let paths = g.selectAll('path')
         .data(links)
         .enter()
