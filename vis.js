@@ -333,7 +333,6 @@ function setupEvents(g, selection, raise) {
         drawVis(the_data);
     });
 
-    // TODO allow zoom out with click on root
     selection.filter(function (d) {
         let this_node_maybe = d3.select(this).datum().data;
         return this_node_maybe.name == current_node_name
