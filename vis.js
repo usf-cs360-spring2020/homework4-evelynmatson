@@ -3,6 +3,7 @@ let colorScale;
 let numberFormat;
 let straightLine;
 let current_node_name;
+let the_data;
 let areas = {
     "Bayview Hunters Point": 3.2995929824653775e-7,
     "Bernal Heights": 6.875398811363375e-8,
@@ -82,6 +83,7 @@ function prepVis() {
  * @param data the data to display.
  */
 function drawVis(data) {
+    the_data = data;
 
     // Make a hierarchy out of the data
     // console.log('plain data', data);
@@ -150,12 +152,13 @@ function drawVis(data) {
 
     let width = 900;
     let height = 600;
+    svg.selectAll('g').remove();
     let plot = svg.append('g')
         .attr('id', 'plot1')
         .attr('transform', translate(width / 2, height / 2));
 
-    drawLinks(plot.append('g'), module.links(), straightLine);
-    drawNodes(plot.append('g'), module.descendants(), true);
+    drawLinks(plot.append('g').attr('id', 'links'), module.links(), straightLine);
+    drawNodes(plot.append('g').attr('id', 'nodes'), module.descendants(), true);
 }
 
 /**
@@ -320,7 +323,7 @@ function setupEvents(g, selection, raise) {
         current_node_name = this_node_maybe.name;
         console.log('set current_node_name to', current_node_name);
 
-        drawVis();
+        drawVis(the_data);
     })
 
     // TODO allow zoom out with click on root
