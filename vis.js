@@ -255,7 +255,6 @@ function toCartesian(r, theta) {
  * @param generator the generator to use
  */
 function drawLinks(g, links, generator) {
-    console.log('drawing links now...');
     let paths = g.selectAll('path')
         .data(links)
         .enter()
@@ -332,9 +331,20 @@ function setupEvents(g, selection, raise) {
         console.log('set current_node_name to', current_node_name);
 
         drawVis(the_data);
-    })
+    });
 
     // TODO allow zoom out with click on root
+    selection.filter(function (d) {
+        let this_node_maybe = d3.select(this).datum().data;
+        return this_node_maybe.name == current_node_name
+    }).on('click.zoom', function(d) {
+        let this_node_maybe = d3.select(this).datum().data;
+        current_node_name = this_node_maybe.parent;
+        if (current_node_name == '') {current_node_name = "All Incidents"}
+        console.log('set current_node_name to', current_node_name);
+
+        drawVis(the_data);
+    });
 }
 
 /**
