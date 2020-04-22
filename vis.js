@@ -137,6 +137,7 @@ function wrangle(data) {
 
 
     drawNodeLinkVis();
+    drawSunburst();
 }
 
 /**
@@ -183,6 +184,65 @@ function drawNodeLinkVis() {
 }
 
 /**
+ * Draw the sunburst visualization after the data has been loaded.
+ */
+function drawSunburst() {
+
+    let root = stratifiedRoot.copy();
+
+    let sunburst_colorScale = d3.scaleSequential( d3.interpolateViridis)
+        .domain([root.height, 0]);
+
+    let pad = 0;
+    let diam = 550;
+    let width = 900;
+    let height = 600;
+    let layout = d3.partition().size([width - 2 * pad, height - 2 * pad]);
+    layout(root);
+
+    let plot = sunburst_svg.append('g')
+        .attr('id', 'plot')
+        .attr('transform', translate(pad, pad));
+
+    let rects = plot.selectAll('rect')
+        .data(root.descendants())
+        .enter()
+        .append('rect')
+        .attr('x', d => d.x0)
+        .attr('y', d => d.y0)
+        .attr('width', d => d.x1 - d.x0)
+        .attr('height', d => d.y1 - d.y0)
+        .attr('id', d => d.data.name)
+        .attr('class', 'rect')
+        .style('fill', d => sunburst_colorScale(d.depth));
+}
+
+
+
+// MY HELPERS
+/**
+ * My own filter unique function. Unique based on an identifier calculated using func.
+ * @param stuff the list of things to filter
+ * @param function the function to use to get an identifier.
+ */
+function filterUnique(stuff, func) {
+    let seen_ids = [];
+
+    let newStuff = stuff.filter(function (item) {
+        let funcVal = func(item);
+
+        if (! seen_ids.includes(funcVal)) {
+            seen_ids.push(funcVal);
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+    return newStuff;
+}
+
+/**
  * Convert a row when loading the data from csv.
  * @param row the raw row to deal with
  * @returns the row, converted
@@ -212,29 +272,6 @@ function convertRow(row) {
     return toReturn;
 }
 
-
-// MY HELPERS
-/**
- * My own filter unique function. Unique based on an identifier calculated using func.
- * @param stuff the list of things to filter
- * @param function the function to use to get an identifier.
- */
-function filterUnique(stuff, func) {
-    let seen_ids = [];
-
-    let newStuff = stuff.filter(function (item) {
-        let funcVal = func(item);
-
-        if (! seen_ids.includes(funcVal)) {
-            seen_ids.push(funcVal);
-            return true;
-        } else {
-            return false;
-        }
-    });
-
-    return newStuff;
-}
 
 
 // SOPHIE'S HELPERS
