@@ -4,8 +4,20 @@ let node_link_colorScale;
 let sunburst_colorScale;
 let numberFormat;
 let straightLine;
-let node_link_current_node_name;
-let current_node_depth = 0;
+// let node_link_current_node_name;
+// let current_node_link_depth = 0;
+
+let sunburst_params = {
+    current_name : '',
+    current_depth : 0
+};
+let node_link_params = {
+    current_name : '',
+    current_depth : 0
+};
+// let sunburst_current_node_name;
+// let current_sunburst_depth = 0;
+
 let the_data;
 let stratifiedRoot;
 let areas = {
@@ -76,7 +88,8 @@ function prepVis() {
     };
 
     // Start visualizing all nodes to begin with
-    node_link_current_node_name = 'All Incidents';
+    node_link_params.current_name = 'All Incidents';
+    sunburst_params.current_name = 'All Incidents';
 
     // Load the data, then draw the visualization!
     let csv = d3.csv('resources/Fire_Department_Calls_for_Service.csv', convertRow)
@@ -155,7 +168,7 @@ function drawNodeLinkVis() {
     // Find the selected node to draw
     let selectedRoot = null;
     stratifiedRoot.each(function(node) {
-        if (node.data.name == node_link_current_node_name) {
+        if (node.data.name == node_link_params.current_name) {
             selectedRoot = node;
         }
     });
@@ -195,7 +208,7 @@ function drawSunburst() {
     // Find the selected node to draw
     let selectedRoot = null;
     stratifiedRoot.each(function(node) {
-        if (node.data.name == node_link_current_node_name) {
+        if (node.data.name == sunburst_params.current_name) {
             selectedRoot = node;
         }
     });
@@ -223,9 +236,9 @@ function drawSunburst() {
         .attr('height', d => d.y1 - d.y0)
         .attr('id', d => d.data.name)
         .attr('class', 'rect')
-        .style('fill', d => sunburst_colorScale(d.depth + current_node_depth));
+        .style('fill', d => sunburst_colorScale(d.depth + sunburst_params.current_depth));
 
-    setupEvents(plot, rects, true);
+    setupEvents(plot, rects, true, sunburst_params);
 }
 
 
@@ -342,9 +355,9 @@ function drawNodes(g, nodes, raise) {
         .attr('cy', d => d.y)
         .attr('id', d => d.data.name)
         .attr('class', 'node')
-        .style('fill', d => node_link_colorScale(d.depth + current_node_depth));
+        .style('fill', d => node_link_colorScale(d.depth + node_link_params.current_depth));
 
-    setupEvents(g, circles, raise);
+    setupEvents(g, circles, raise, node_link_params);
 }
 
 /**
@@ -352,8 +365,9 @@ function drawNodes(g, nodes, raise) {
  * @param g where to draw
  * @param selection the selected element
  * @param raise whether to raise them
+ * @param params the current name and current depth to use
  */
-function setupEvents(g, selection, raise) {
+function setupEvents(g, selection, raise, params) {
     selection.on('mouseover.highlight', function(d) {
         // https://github.com/d3/d3-hierarchy#node_path
         // returns path from d3.select(this) node to selection.data()[0] root node
@@ -388,39 +402,45 @@ function setupEvents(g, selection, raise) {
 
     selection.on('click.zoom', function(d) {
         let this_node_maybe = d3.select(this).datum().data;
-        console.log('this node maybe', this_node_maybe);
-        console.log('this node datum', d3.select(this).datum());
+        // console.log('this node maybe', this_node_maybe);
+        // console.log('this node datum', d3.select(this).datum());
+        // console.log('down...');
 
         // Update the current node name
-        node_link_current_node_name = this_node_maybe.name;
-        console.log('set current_node_name to', node_link_current_node_name);
+        params.current_name = this_node_maybe.name;
+        console.log('set current_node_name to', params.current_name);
 
         // Update the current depth
-        current_node_depth += d3.select(this).datum().depth;
-        console.log('set current depth to', current_node_depth);
+        params.current_depth += d3.select(this).datum().depth;
+        console.log('set current depth to', params.current_depth);
 
         drawSunburst();
         drawNodeLinkVis();
     });
 
+    // console.log('selection', selection);
+    // let selectedSelection = d3.select(selection['_groups'][0]);
+    // console.log('selected selection', selectedSelection);
     // Zoom for the top (displayed) node
     selection.filter(function (d) {
-        let this_node_maybe = d3.select(this).datum().data;
-        return this_node_maybe.name == node_link_current_node_name
+        let this_node = d3.select(this).datum().data;
+        return this_node.name == params.current_name
     }).on('click.zoom', function(d) {
+    // selectedSelection.on('click.zoom', function(d) {
         let this_node_maybe = d3.select(this).datum().data;
-        console.log('this node maybe', this_node_maybe);
-        console.log('this node datum', d3.select(this).datum());
+        // console.log('up!');
+        // console.log('this node maybe', this_node_maybe);
+        // console.log('this node datum', d3.select(this).datum());
 
         // Update the current node name
-        node_link_current_node_name = this_node_maybe.parent;
-        if (node_link_current_node_name == '') {node_link_current_node_name = "All Incidents"}
-        console.log('set current_node_name to', node_link_current_node_name);
+        params.current_name = this_node_maybe.parent;
+        if (params.current_name == '') {params.current_name = "All Incidents"}
+        console.log('set current_node_name to', params.current_name);
 
         // Update the current depth
-        current_node_depth -= d3.select(this).datum().depth + 1;
-        if (current_node_depth < 0) {current_node_depth = 0}; // Minimum depth is 0
-        console.log('set current depth to', current_node_depth);
+        params.current_depth -= d3.select(this).datum().depth + 1;
+        if (params.current_depth < 0) {params.current_depth = 0} // Minimum depth is 0
+        console.log('set current depth to', params.current_depth);
 
         drawNodeLinkVis();
         drawSunburst();
