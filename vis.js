@@ -156,6 +156,14 @@ function wrangle(data) {
     sunburst_colorScale = d3.scaleSequential( d3.interpolateViridis)
         .domain([stratifiedRoot.height, 0]);
 
+    // Sort sort sort
+
+    stratifiedRoot.sort(function(a, b) {
+        return b.height - a.height || b.value - a.value;
+        // TODO value might be bad here
+    });
+    console.log('root before sort', stratifiedRoot);
+
     drawNodeLinkVis();
     drawSunburst();
 }
