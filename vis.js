@@ -223,7 +223,7 @@ function drawSunburst() {
         .attr('height', d => d.y1 - d.y0)
         .attr('id', d => d.data.name)
         .attr('class', 'rect')
-        .style('fill', d => sunburst_colorScale(d.depth));
+        .style('fill', d => sunburst_colorScale(d.depth + current_node_depth));
 
     setupEvents(plot, rects, true);
 }
@@ -342,7 +342,7 @@ function drawNodes(g, nodes, raise) {
         .attr('cy', d => d.y)
         .attr('id', d => d.data.name)
         .attr('class', 'node')
-        .style('fill', d => node_link_colorScale(d.depth));
+        .style('fill', d => node_link_colorScale(d.depth + current_node_depth));
 
     setupEvents(g, circles, raise);
 }
