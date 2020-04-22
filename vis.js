@@ -1,9 +1,11 @@
-let svg;
-let colorScale;
+let node_svg;
+let sunburst_svg;
+let node_link_colorScale;
 let numberFormat;
 let straightLine;
-let current_node_name;
+let node_link_current_node_name;
 let the_data;
+let stratifiedRoot;
 let areas = {
     "Bayview Hunters Point": 3.2995929824653775e-7,
     "Bernal Heights": 6.875398811363375e-8,
@@ -58,7 +60,8 @@ function prepVis() {
 
 
     // TODO prepare things, set up
-    svg = d3.select('svg#vis_svg');
+    node_svg = d3.select('svg#node_link_vis_svg');
+    sunburst_svg = d3.select('svg#sunburst_vis_svg');
     numberFormat = d3.format(".2~s");
 
     // Sophie's straight line generator
@@ -71,18 +74,18 @@ function prepVis() {
     };
 
     // Start visualizing all nodes to begin with
-    current_node_name = 'All Incidents';
+    node_link_current_node_name = 'All Incidents';
 
     // Load the data, then draw the visualization!
     let csv = d3.csv('resources/Fire_Department_Calls_for_Service.csv', convertRow)
-        .then(drawVis);
+        .then(wrangle);
 }
 
 /**
- * Once the data has been loaded, draw the visualization.
- * @param data the data to display.
+ * Once the data has been loaded, wrangle it into a hierarchical form.
+ * @param data the data to wrangle.
  */
-function drawVis(data) {
+function wrangle(data) {
     the_data = data;
 
     // Make a hierarchy out of the data
@@ -119,7 +122,7 @@ function drawVis(data) {
     console.log('all nodes', allNodes);
 
     // Make the hierarchy
-    let stratifiedRoot = d3.stratify()
+    stratifiedRoot = d3.stratify()
         .id(row => row.name)
         .parentId(row => row.parent)
         (allNodes);
@@ -132,16 +135,26 @@ function drawVis(data) {
     });
     console.log('root with calculations', stratifiedRoot);
 
+
+    drawNodeLinkVis();
+}
+
+/**
+ * Draw the Node Link Visualization, after the data is prepared
+ */
+function drawNodeLinkVis() {
+
     // Find the selected node to draw
-    let selectedRoot;
+    let selectedRoot = null;
     stratifiedRoot.each(function(node) {
-        if (node.data.name == current_node_name) {
+        if (node.data.name == node_link_current_node_name) {
             selectedRoot = node;
         }
     });
 
-    //  Actually draw something
-    colorScale = d3.scaleSequential([selectedRoot.height, 0], d3.interpolateViridis);
+    //  Actually draw node link
+    node_link_colorScale = d3.scaleSequential( d3.interpolateViridis)
+        .domain([selectedRoot.height, 0]);
 
     let module = selectedRoot.copy();
     let pad = 0;
@@ -160,8 +173,8 @@ function drawVis(data) {
 
     let width = 900;
     let height = 600;
-    svg.selectAll('g').remove();
-    let plot = svg.append('g')
+    node_svg.selectAll('g').remove();
+    let plot = node_svg.append('g')
         .attr('id', 'plot1')
         .attr('transform', translate(width / 2, height / 2));
 
@@ -281,7 +294,7 @@ function drawNodes(g, nodes, raise) {
         .attr('cy', d => d.y)
         .attr('id', d => d.data.name)
         .attr('class', 'node')
-        .style('fill', d => colorScale(d.depth));
+        .style('fill', d => node_link_colorScale(d.depth));
 
     setupEvents(g, circles, raise);
 }
@@ -327,22 +340,22 @@ function setupEvents(g, selection, raise) {
 
     selection.on('click.zoom', function(d) {
         let this_node_maybe = d3.select(this).datum().data;
-        current_node_name = this_node_maybe.name;
-        console.log('set current_node_name to', current_node_name);
+        node_link_current_node_name = this_node_maybe.name;
+        console.log('set current_node_name to', node_link_current_node_name);
 
-        drawVis(the_data);
+        wrangle(the_data);
     });
 
     selection.filter(function (d) {
         let this_node_maybe = d3.select(this).datum().data;
-        return this_node_maybe.name == current_node_name
+        return this_node_maybe.name == node_link_current_node_name
     }).on('click.zoom', function(d) {
         let this_node_maybe = d3.select(this).datum().data;
-        current_node_name = this_node_maybe.parent;
-        if (current_node_name == '') {current_node_name = "All Incidents"}
-        console.log('set current_node_name to', current_node_name);
+        node_link_current_node_name = this_node_maybe.parent;
+        if (node_link_current_node_name == '') {node_link_current_node_name = "All Incidents"}
+        console.log('set current_node_name to', node_link_current_node_name);
 
-        drawVis(the_data);
+        drawNodeLinkVis();
     });
 }
 
