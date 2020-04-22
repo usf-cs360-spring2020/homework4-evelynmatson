@@ -1,9 +1,11 @@
 let node_svg;
 let sunburst_svg;
 let node_link_colorScale;
+let sunburst_colorScale;
 let numberFormat;
 let straightLine;
 let node_link_current_node_name;
+let current_node_depth = 0;
 let the_data;
 let stratifiedRoot;
 let areas = {
@@ -135,6 +137,11 @@ function wrangle(data) {
     });
     console.log('root with calculations', stratifiedRoot);
 
+    // Prep the color scales
+    node_link_colorScale = d3.scaleSequential( d3.interpolateViridis)
+        .domain([stratifiedRoot.height, 0]);
+    sunburst_colorScale = d3.scaleSequential( d3.interpolateViridis)
+        .domain([stratifiedRoot.height, 0]);
 
     drawNodeLinkVis();
     drawSunburst();
@@ -154,9 +161,6 @@ function drawNodeLinkVis() {
     });
 
     //  Actually draw node link
-    node_link_colorScale = d3.scaleSequential( d3.interpolateViridis)
-        .domain([selectedRoot.height, 0]);
-
     let module = selectedRoot.copy();
     let pad = 0;
     let diam = 550;
@@ -188,10 +192,14 @@ function drawNodeLinkVis() {
  */
 function drawSunburst() {
 
-    let root = stratifiedRoot.copy();
-
-    let sunburst_colorScale = d3.scaleSequential( d3.interpolateViridis)
-        .domain([root.height, 0]);
+    // Find the selected node to draw
+    let selectedRoot = null;
+    stratifiedRoot.each(function(node) {
+        if (node.data.name == node_link_current_node_name) {
+            selectedRoot = node;
+        }
+    });
+    let root = selectedRoot.copy();
 
     let pad = 0;
     let diam = 550;
@@ -200,6 +208,7 @@ function drawSunburst() {
     let layout = d3.partition().size([width - 2 * pad, height - 2 * pad]);
     layout(root);
 
+    sunburst_svg.selectAll('g').remove();
     let plot = sunburst_svg.append('g')
         .attr('id', 'plot')
         .attr('transform', translate(pad, pad));
@@ -215,6 +224,8 @@ function drawSunburst() {
         .attr('id', d => d.data.name)
         .attr('class', 'rect')
         .style('fill', d => sunburst_colorScale(d.depth));
+
+    setupEvents(plot, rects, true);
 }
 
 
@@ -377,22 +388,42 @@ function setupEvents(g, selection, raise) {
 
     selection.on('click.zoom', function(d) {
         let this_node_maybe = d3.select(this).datum().data;
+        console.log('this node maybe', this_node_maybe);
+        console.log('this node datum', d3.select(this).datum());
+
+        // Update the current node name
         node_link_current_node_name = this_node_maybe.name;
         console.log('set current_node_name to', node_link_current_node_name);
 
-        wrangle(the_data);
+        // Update the current depth
+        current_node_depth += d3.select(this).datum().depth;
+        console.log('set current depth to', current_node_depth);
+
+        drawSunburst();
+        drawNodeLinkVis();
     });
 
+    // Zoom for the top (displayed) node
     selection.filter(function (d) {
         let this_node_maybe = d3.select(this).datum().data;
         return this_node_maybe.name == node_link_current_node_name
     }).on('click.zoom', function(d) {
         let this_node_maybe = d3.select(this).datum().data;
+        console.log('this node maybe', this_node_maybe);
+        console.log('this node datum', d3.select(this).datum());
+
+        // Update the current node name
         node_link_current_node_name = this_node_maybe.parent;
         if (node_link_current_node_name == '') {node_link_current_node_name = "All Incidents"}
         console.log('set current_node_name to', node_link_current_node_name);
 
+        // Update the current depth
+        current_node_depth -= d3.select(this).datum().depth + 1;
+        if (current_node_depth < 0) {current_node_depth = 0}; // Minimum depth is 0
+        console.log('set current depth to', current_node_depth);
+
         drawNodeLinkVis();
+        drawSunburst();
     });
 }
 
