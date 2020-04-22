@@ -159,8 +159,7 @@ function wrangle(data) {
     // Sort sort sort
 
     stratifiedRoot.sort(function(a, b) {
-        return b.height - a.height || b.value - a.value;
-        // TODO value might be bad here
+        return b.height - a.height || b.data.totalCount - a.data.totalCount;
     });
     console.log('root before sort', stratifiedRoot);
 
