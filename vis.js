@@ -69,7 +69,6 @@ let areas = {
 function prepVis() {
 
 
-    // TODO prepare things, set up
     node_svg = d3.select('svg#node_link_vis_svg');
     sunburst_svg = d3.select('svg#sunburst_vis_svg');
     numberFormat = d3.format(".2~s");
@@ -143,6 +142,7 @@ function wrangle(data) {
     stratifiedRoot.sum(row => row['Incident Count']);
     stratifiedRoot.each(function(node) {
         node.data.totalCount = node.value;
+        // node.data.countPerArea = node.data.totalCount / node.data.area;
     });
     console.log('root with calculations', stratifiedRoot);
 
@@ -279,7 +279,7 @@ function convertRow(row) {
     toReturn['Call Type Group'] = row['Call Type Group'];
     toReturn['Call Type'] = row['Call Type'];
     toReturn['Neighborhood'] = row['Neighborhooods - Analysis Boundaries'];
-    toReturn['Area'] = areas[toReturn['Neighborhood']];
+    // toReturn['Area'] = areas[toReturn['Neighborhood']];
 
     // TODO Remove apostrophes?
     // toReturn['Neighborhood'] = row['Neighborhooods - Analysis Boundaries'].replace(/'/g, '');
@@ -477,6 +477,7 @@ function showTooltip(g, node) {
 
     // use node name and total size as tooltip text
     let text = `${name} (${numberFormat(datum.data.totalCount)} total incidents)`;
+    console.log('datum', datum);
 
     // create tooltip
     let tooltip = g.append('text')

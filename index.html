@@ -136,23 +136,24 @@
         <h2 id="about">
           About the Assignment
         </h2>
-        <p>This is my third homework assignment for CS 360: Data Visualization during spring semester 2020 with Sophie Engle.
-          We were given this dataset on San Francisco's 311 reports to use for some sort of geographic visualization.
-          After exploring the dataset, I decided to focus on noise complaints.
+        <p>This is my fourth homework assignment for CS 360: Data Visualization during spring semester 2020 with Sophie Engle.
+          We were given this dataset on San Francisco's Fire Department calls for service reports to use for some sort of hierarchical visualization.
+          After exploring the dataset, I decided to organize it by call type (broader group then specific type), and by neighborhood.
         </p>
 
         <h2 id="data">Dataset Info</h2>
-        <p>The dataset is published under the <a href="http://opendatacommons.org/licenses/pddl/1.0/">Open Data Commons Public Domain Dedication and License</a>. I accessed it on April 2nd 2020 at <a href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6">data.sfgov.org</a>, but its original source was <a href="http://www.sf311.org">http://www.sf311.org</a></p><br>
+        <p>The dataset is published under the <a href="www.opendatacommons.org/licenses/pddl/1.0/">Public Domain Dedication and License v1.0</a>. I accessed it on April 15th 2020 at <a href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6">data.sfgov.org</a>.</p>
+
 
         <div class="tile is-ancestor">
           <div class="tile is-4 is-vertical is-parent">
             <div class="tile is-child box">
               <p class="title">Accessed</p>
-              <p class="subtitle">April 2, 2020</p>
+              <p class="subtitle">April 15th, 2020</p>
             </div>
             <div class="tile is-child box">
               <p class="subtitle">Columns</p>
-              <p class="title">20</p>
+              <p class="title">34</p>
             </div>
           </div>
           <div class="tile is-parent is-8">
@@ -160,7 +161,7 @@
               <p class="title">
                 San Francisco 311 Cases</p>
               <p>SF311 cases created since 7/1/2008 with location information.
-                This dataset includes cases generally associated with a place or thing (for example parks, streets, or buildings) and created July 1, 2008 or later. Cases generally logged by a user regarding their own needs (for example, property or business tax questions, parking permit requests) are not included
+                This dataset includes all fire unit responses to calls in San Francisco, California. Each response includes the call number, incident number, address, unit identifier, call type, disposition, and relevant time intervals. This dataset is updated daily and includes over 5.21 million responses.
             </div>
           </div>
         </div>
@@ -178,36 +179,46 @@
           </thead>
           <tbody>
           <tr>
-            <td>Category</td>
-            <td>Broad type of incident.<br>
-              <span class="has-text-grey-light">Example: <em>Noise Report</em></span></td>
+            <th>Entry Time</th>
+            <td>Date and time the 911 operator submits the entry of the initical call information into the CAD system</td>
           </tr>
           <tr>
-            <td>Request Type</td>
-            <td>More specific type of incident.<br>
-              <span class="has-text-grey-light">Example: <em>construction_private_property</em></span></td>
+            <th>Call Type Group</th>
+            <td>Call types: Fire, Alarm, Potential Life Threatening, Non Life Threatening, and Null</td>
           </tr>
           <tr>
-            <td>Neighborhood</td>
-            <td>Neighborhood of the city where the incident took place.<br>
-              <span class="has-text-grey-light">Example: <em>South of Market</em></span></td>
+            <th>Call Type</th>
+            <td>
+              Type of call the incident falls into. Relevant types (among others):
+              <ul>
+                <li>Medical Incident</li>
+                <li>Structure Fire</li>
+                <li>Traffic Collision</li>
+              </ul>
+            </td>
           </tr>
           <tr>
-            <td>Latitude</td>
-            <td>Vertical geographic position.<br>
-              <span class="has-text-grey-light">Example: <em>37.7821011</em></span></td>
-          </tr>
-          <tr>
-            <td>Longitude</td>
-            <td>Horizontal geographic position.<br>
-              <span class="has-text-grey-light">Example: <em>-122.4407522</em></span></td>
+            <th>Neighborhoods - Analysis Boundaries</th>
+            <td>Neighborhood District associated with this address.</td>
           </tr>
           </tbody>
         </table>
 
         <h2 id="wrangling">Data Wrangling</h2>
-        <p>I filtered the dataset when downloading it from data.sfgov.org, and kept only cases of category "Noise Report", and which were opened in February 2020. <a href="resources/311_Cases_filtered_feb_noise.csv">[Data file as downloaded]</a>.
-        Then I loaded the data into D3, and created the visualization. I created a JavaScript object to map reports to their neighborhood, to make hover data-on-demand more efficient, but that was about it.</p>
+        <p>I filtered the dataset when downloading it from data.sfgov.org, (see screenshot <a href="resources/filtering%20on%20sfdata.png">here</a> for details), in the following way:</p>
+        <ul>
+          <li>I grouped first by "Neighborhoods - Analysis Boundaries"</li>
+          <li>Next, I grouped by "Call Type Group"</li>
+          <li>Finally, I grouped by "Call Type"</li>
+          <li>I used a 'Roll-Up' operation by Incident Count, and used the 'Count' function.</li>
+          <li>Lastly, I sorted (descending) by "Received DtTm".</li>
+          <li>Additionally, I used the filter operation to select only rows with a "Received DtTm" in 2019.</li>
+        </ul>
+
+
+
+        <p>See here for my data as downloaded and as it is loaded into D3.js: <a href="resources/Fire_Department_Calls_for_Service.csv">Fire_Department_Calls_for_Service.csv</a>.</p>
+        <p>Then I loaded the data into D3.js for the last bit of wrangling. I had to create nodes for the mid and top levels of the hierarchy (one for each Call Type Group, and one for each Call Type), define a unique name and the correct parent name for each node, filter out duplicate nodes, then I used d3.stratify() to make the hierarchy format. After this, I had to calculate incident counts for each node (summing the values of each descendent node for the non-leaf nodes), and finally sort by largest incident count first. See the wrangle() function in my javascript file here: <a href="vis.js">vis.js</a>.</p>
 
         <h2 id="bio">About me</h2><br>
 
