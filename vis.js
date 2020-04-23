@@ -4,8 +4,6 @@ let node_link_colorScale;
 let sunburst_colorScale;
 let numberFormat;
 let straightLine;
-// let node_link_current_node_name;
-// let current_node_link_depth = 0;
 
 let sunburst_params = {
     current_name : '',
@@ -15,8 +13,6 @@ let node_link_params = {
     current_name : '',
     current_depth : 0
 };
-// let sunburst_current_node_name;
-// let current_sunburst_depth = 0;
 
 let the_data;
 let stratifiedRoot;
@@ -196,7 +192,7 @@ function drawNodeLinkVis() {
         node.y = point.y;
     });
 
-    let width = 900;
+    let width = 600;
     let height = 600;
     node_svg.selectAll('g').remove();
     let plot = node_svg.append('g')
@@ -223,7 +219,7 @@ function drawSunburst() {
 
     let pad = 0;
     let diam = 550;
-    let width = 900;
+    let width = 960;
     let height = 600;
     let layout = d3.partition().size([width - 2 * pad, height - 2 * pad]);
     layout(root);
