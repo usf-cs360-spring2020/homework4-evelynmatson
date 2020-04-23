@@ -147,20 +147,48 @@
   </nav>
   <!-- End page navigation -->
 
+  <!-- Begin page content -->
   <section class="section">
     <div class="container">
-
-      <!-- Begin page content -->
       <div class="content page-content">
         <h1 class="title">
-          Noise Reports in San Francisco
+          2019 SF Fire Department Calls for Service
         </h1>
         <p class="subtitle">
-          Reported in February 2020, separated by category.
+          Divided by Call Type Group, Call Type, and by Neighborhood.
         </p>
 
-<!--        Hardcoded SVG where d3 will make the visualization-->
-        <svg id="node_link_vis_svg" class="visualization" height="600" width="600"></svg>
+        <h3>About</h3>
+        <p>This first visualization is a circular node-link diagram visualization of the hierarchy I made, with straight edges.
+        Each level/color of node represents a different grouping of calls, in the following way :</p>
+        <ul>
+          <li>Top level (yellow) node : All calls from 2019.</li>
+          <li>Upper level (green) node : A certain Call Type Group (hover for details).</li>
+          <li>Mid level (blue) node : A certain Call Type under a given Call Type Group (more specific than the group, hover for details).</li>
+          <li>Lower level (purple) node : The calls of that Call Type Group and Call TYpe from a certain neighborhood (hover for details).</li>
+        </ul>
+
+        <h3>Encoding</h3>
+        <p>Data is encoded in this visualization as follows:</p>
+        <ul>
+          <li>
+            Radial location of dot (how far it is from center) and color of dot : level of hierarchy.
+            More central and more yellow nodes represent an aggregation of more information, and nodes that are further out and more purple represent more specific information.
+          </li>
+          <li>
+            Angular location of dot (what angle it's at) : number of total incident count.
+            For a given node level, the nodes with larger call count come first, and smaller call count come last.
+          </li>
+          <li>
+            Links: A link represents a parent-child relationship in the hierarchy.
+            So a node that is a subcategory of another will have a link to the node representing that braoder category.
+          </li>
+        </ul>
+
+        <!-- Hardcoded SVGs where d3 will make the visualization-->
+        <svg id="node_link_vis_svg" class="visualization" height="600" width="600"></svg><br>
+
+        <!-- Hardcoded SVGs where d3 will make the visualization-->
         <svg id="sunburst_vis_svg" class="visualization" height="600" width="960"></svg>
         <script src="vis.js"></script>
 
@@ -204,10 +232,9 @@
           <li><a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/SF-Find-Neighborhoods/pty2-tcw4">SF Find Neighborhoods</a></li>
         </ul>
       </div>
-      <!-- End page content -->
-
     </div>
   </section>
+  <!-- End page content -->
 
   <!-- Page footer -->
   <!--  <div class="false-footer"></div>-->
@@ -231,6 +258,7 @@
   </footer>
   <!-- End page footer -->
 
+
   <!-- Mobile menu responsiveness -->
   <!-- https://bulma.io/documentation/components/navbar/ -->
   <script>
@@ -250,6 +278,6 @@
   });
   </script>
   <!-- End mobile menu responsiveness -->
-  </body>
 
+  </body>
 </html>
