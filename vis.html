@@ -183,16 +183,33 @@
             Links: A link represents a parent-child relationship in the hierarchy.
             So a node that is a subcategory of another will have a link to the node representing that braoder category.
           </li>
-        </ul>
+        </ul><br>
 
         <!-- Hardcoded SVGs where d3 will make the visualization-->
         <svg id="node_link_vis_svg" class="visualization" height="600" width="600"></svg><br>
 
         <h3>About</h3>
-        <p>Hello</p>
+        <p>
+          This second visualization is a partition layout space filling visualization of the same hierarchy.
+          Each rectangle in the visualization represents a node, and the area represents the number of calls which fall under the category that node represents.
+          The colors and levels represent the same types of nodes as before, and is described as follows:
+        </p>
+        <ul>
+          <li>Top level (yellow) node : All calls from 2019.</li>
+          <li>Upper level (green) node : A certain Call Type Group (hover for details).</li>
+          <li>Mid level (blue) node : A certain Call Type under a given Call Type Group (more specific than the group, hover for details).</li>
+          <li>Lower level (purple) node : The calls of that Call Type Group and Call TYpe from a certain neighborhood (hover for details).</li>
+        </ul>
 
         <h3>Encoding</h3>
-        <p>Hi Again</p>
+        <p>
+          In this visualization, data is encoded as follows:
+        </p>
+        <ul>
+          <li>Vertical position of rectangle (and color of rectangle) : how broad of an aggregation of data it represents (higher is more aggregated, and lower is more specific)</li>
+          <li>Horizontal position of rectangle : which broader category it falls under (any node that falls under a higher category will be under that category) and the rank of how many calls that node represents (further left rectangles represent more calls). </li>
+          <li>Width of node : how many calls it represents. Wider rectangles represent more calls.</li>
+        </ul>
 
         <!-- Hardcoded SVGs where d3 will make the visualization-->
         <svg id="sunburst_vis_svg" class="visualization" height="600" width="960"></svg>
@@ -214,8 +231,8 @@
 <!--          <li>Sophie Engle for her <a href="https://bl.ocks.org/sjengle/2f6d4832397e3cdd78d735774cb5a4f2">bl.ocks.org map visualization example</a></li>-->
 <!--          <li>Higo Wiledal for his <a href="https://medium.com/your-majesty-co/frameworkless-javascript-template-literals-the-best-thing-since-sliced-bread-d97f000ce955">article about the magic of JavaScript template literals</a></li>-->
 <!--          <li>d3noob for their bl.ocks.org <a href="https://bl.ocks.org/d3noob/5d621a60e2d1d02086bf">block about hiding d3 elements with click events</a></li>-->
-          <li>https://observablehq.com/@sjengle/java-11-api-hierarchy-data-wrangling</li>
-          <li>https://observablehq.com/@sjengle/java-11-api-hierarchy-visualization</li>
+          <li><a href="https://observablehq.com/@sjengle/java-11-api-hierarchy-data-wrangling">https://observablehq.com/@sjengle/java-11-api-hierarchy-data-wrangling</a></li>
+          <li><a href="https://observablehq.com/@sjengle/java-11-api-hierarchy-visualization">https://observablehq.com/@sjengle/java-11-api-hierarchy-visualization</a></li>
           <li>https://observablehq.com/@d3/zoomable-sunburst</li>
 <!--          TODO don't delete this-->
           <li>https://data.sfgov.org/Geographic-Locations-and-Boundaries/Analysis-Neighborhoods/p5b7-5n3h</li>
