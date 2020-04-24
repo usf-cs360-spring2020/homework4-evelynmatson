@@ -132,9 +132,10 @@
               <td><i class="has-text-success fas fa-check-circle"></i></td>
               <td>
                 <ul class="fa-ul check-list grade-list">
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Visualize the dataset (see §1.1 for details) on a projected base map (see §1.2 for details) using one of the following visualization techniques: (non-proportianal symbol map)<br></li>
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... show the location of every individual request made.<br></li>
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... encode an additional piece of categorical information using color.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Wrangle data into a hierarchical JSON format.
+                    <br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>The hierarchy must have height 3 or more (i.e. at least 3 levels including the root and leaf nodes)<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... and each leaf node must have an attribute.<br></li>
                 </ul>
               </td>
             </tr>
@@ -144,7 +145,10 @@
               <td><i class="has-text-success fas fa-check-circle"></i></td>
               <td>
                 <ul class="fa-ul check-list grade-list">
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Complete the D level functionality using D3 version 5.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>The D-level requirements plus implement one node/link diagram with details-on-demand interactivity in D3v5.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... using the d3.cluster() or d3.tree() layout.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>The node attribute must be encoded somehow <br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Nodes must have a minimum details-on-demand interactivity showing the node label.<br></li>
                 </ul>
               </td>
             </tr>
@@ -154,11 +158,11 @@
               <td><i class="has-text-success fas fa-check-circle"></i></td>
               <td>
                 <ul class="fa-ul check-list grade-list">
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Complete the C level functionality and implement details-on-demand interactivity.<br></li>
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... show details when the mouse hovers over a region<br></li>
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... implement this in base D3 ...<br></li>
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... details should be readable and informative. <br></li><br>
-                  <!--                  <li style="color: #888888"><em><span class="fa-li"><i class="fas fa-info-circle"></i></span>As I posted about on Piazza, Sophie gave me permission to move on to D3 after doing basic RawGraphs prototyping, since it was unable to prototype my whole visualization concept.<br></em></li>-->
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>The C-level requirements plus implement one space filling diagram with details-on-demand interactivity in D3v5.
+                    <br></li>
+                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>using d3.partition(), d3.treemap(), or d3.pack() layout.<br></li>
+                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>The node attribute must be encoded somehow (i.e. using color, size, shape, etc.).<br></li>
+                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Nodes must have a minimum details-on-demand interactivity showing the node label.<br></li><br>
                 </ul>
               </td>
             </tr>
@@ -168,9 +172,8 @@
                 <td><i class="has-text-success fas fa-check-circle"></i></td>
               <td>
                 <ul class="fa-ul check-list grade-list">
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Complete the B level functionality and implement one of the following: (Filtering)<br></li>
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Allow users to filter the data<br></li>
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>... add a linked legend to control what data is brushed/filtered<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>The B level requirements plus filtering, brushing, or zooming for one of the visualizations.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>You only need to implement this interactivity in one of the visualizations, but must still support details-on-demand interactivity in that visualization.<br></li>
                 </ul>
               </td>
             </tr>
@@ -188,13 +191,13 @@
             </tr>
 
             <tr>
-              <td>Visualization Writeup</td>
+              <td>Per-Visualization Writeups</td>
               <td><i class="has-text-success fas fa-check-circle"></i></td>
               <td>
                 <ul class="check-list fa-ul grade-list">
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Encoding: Include how to interpret your visualization, indicating exactly how data is encoded.<br></li>
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Interactivity: Include how to interact with your visualization.<br></li>
-                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Wrangling: Include any per-visualization data wrangling you performed on the original dataset, including filtering and processing, and how you wrangled the data. Link to the wrangled data in your repository when possible.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Encoding: Include how to interpret your visualization, indicating exactly how data is encoded. For example, "passenger count is encoded by the length of each bar, so longer bars represent higher passenger count."<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Interactivity: Include how to interact with your visualization. For example, "hover over each bar to see detailed information about that airline." If you are unable to interact with your visualization, still include this section and state as much.<br></li>
+                  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Wrangling: Include any per-visualization data wrangling you performed on the original dataset, including filtering and processing, and how you wrangled the data.<br>No per-visualization wrangling was done. See main page for information about wrangling I did for the visualizations in general.</li>
                   <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Conclusion: Include one conclusion you can make about the data using your visualization. The conclusion should ideally be something that a simple statistic could not replicate.<br></li>
                   <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Attribution: Include any inspirations that helped you create this visualization, any additional datasets you used, and any code that you referenced.<br></li>
                 </ul>
