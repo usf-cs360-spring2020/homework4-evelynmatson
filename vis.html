@@ -216,10 +216,18 @@
         <script src="vis.js"></script>
 
         <h3>Interactivity</h3>
-        <p>I have enabled both details-on-demand interactivity and filtering interactivity.</p>
-        <p>When <strong>hovering over different neighborhoods</strong> on the map, a details pane will appear which lists the number of incidents from different categories that happened in that neighborhood.
-        The neighborhood will also be highlighted in red, making its boundaries clearer.</p>
-        <p>By <strong>clicking on the colored swatches in the legend</strong>, you can toggle each category of report to filter the data to only show the types you are interested in.</p>
+        <p>
+          For both visualizations, I have implemented details-on-demand interactivity via a data tooltip, and zooming interactivity via clicking. You can interact with them as follows :
+        </p>
+        <ul>
+          <li>If you <strong>hover your mouse over a node or rectangle</strong>, a tooltip will pop up that tells you what that node represents, and how many calls it encompasses.</li>
+          <li>If you <strong>click on a node or rectangle</strong> (other than the root one), the visualization will redraw 'zoomed in' with that node as the new root, showing you that node and its descendents in more detail.</li>
+          <li>If you <strong>click on the root node or rectangle</strong>, the visualization will redraw 'zoomed out' one level, to let you go back to a broader picture of the hierarchy.</li>
+        </ul>
+<!--        <p>I have enabled both details-on-demand interactivity and filtering interactivity.</p>-->
+<!--        <p>When <strong>hovering over different neighborhoods</strong> on the map, a details pane will appear which lists the number of incidents from different categories that happened in that neighborhood.-->
+<!--        The neighborhood will also be highlighted in red, making its boundaries clearer.</p>-->
+<!--        <p>By <strong>clicking on the colored swatches in the legend</strong>, you can toggle each category of report to filter the data to only show the types you are interested in.</p>-->
 
         <h3>Conclusions</h3>
         <p>The visualization makes it clear that more noise reports happen near the downtown region of the city, and fewer happen in the west and south parts of the city.
